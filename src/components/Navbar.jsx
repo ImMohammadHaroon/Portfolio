@@ -39,9 +39,9 @@ const Navbar = () => {
               to="home"
               smooth={true}
               duration={500}
-              className="text-xl md:text-2xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
+              className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#609966] to-[#40513B] dark:from-[#EDF1D6] dark:to-[#9DC08B] bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
             >
-              Mohammad Haroon
+              DevOwl
             </Link>
           </div>
 

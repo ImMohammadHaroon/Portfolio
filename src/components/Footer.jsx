@@ -72,7 +72,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white">Mohammad Haroon</h3>
+            <h3 className="text-2xl font-bold text-white">DevOwl</h3>
             <p className="text-gray-400 leading-relaxed">
               Full Stack Web Developer specializing in creating responsive and interactive web experiences.
             </p>
@@ -148,11 +148,11 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-500 transition-all"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent text-white placeholder-gray-500 transition-all"
               />
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
+                className="w-full px-4 py-2 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Subscribe
               </button>
@@ -173,7 +173,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <p className="text-gray-400 text-sm text-center md:text-left">
-            © 2025 Mohammad Haroon. All rights reserved.
+            © 2025 DevOwl. All rights reserved.
           </p>
 
           {/* Social Links */}

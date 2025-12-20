@@ -211,7 +211,7 @@ const Contact = () => {
                     key={idx}
                     className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#609966] to-[#9DC08B] rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
                     <div className="flex-1">
@@ -219,7 +219,7 @@ const Contact = () => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-gray-800 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                          className="text-gray-800 dark:text-white font-medium hover:text-[#609966] dark:hover:text-[#9DC08B] transition-colors"
                         >
                           {item.value}
                         </a>
@@ -281,7 +281,7 @@ const Contact = () => {
                   onBlur={handleBlur}
                   className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${
                     touched.name && errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
                   placeholder="John Doe"
                 />
                 {touched.name && errors.name && (
@@ -308,7 +308,7 @@ const Contact = () => {
                   onBlur={handleBlur}
                   className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${
                     touched.email && errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
                   placeholder="john@example.com"
                 />
                 {touched.email && errors.email && (
@@ -335,7 +335,7 @@ const Contact = () => {
                   onBlur={handleBlur}
                   className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${
                     touched.subject && errors.subject ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
                   placeholder="Project Inquiry"
                 />
                 {touched.subject && errors.subject && (
@@ -362,7 +362,7 @@ const Contact = () => {
                   rows="5"
                   className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${
                     touched.message && errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white resize-none`}
+                  } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white resize-none`}
                   placeholder="Tell me about your project..."
                 ></textarea>
                 {touched.message && errors.message && (
@@ -379,7 +379,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                className="w-full px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

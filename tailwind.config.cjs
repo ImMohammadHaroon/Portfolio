@@ -9,21 +9,24 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0F172A',
-          dark: '#020617',
-          light: '#1E293B',
+          DEFAULT: '#40513B',
+          dark: '#2d3a29',
+          light: '#609966',
         },
         secondary: {
-          DEFAULT: '#1E293B',
-          dark: '#0F172A',
-          light: '#334155',
+          DEFAULT: '#609966',
+          dark: '#40513B',
+          light: '#9DC08B',
         },
         accent: {
-          DEFAULT: '#3B82F6',
-          light: '#60A5FA',
-          dark: '#2563EB',
+          DEFAULT: '#9DC08B',
+          light: '#EDF1D6',
+          dark: '#609966',
         },
-        success: '#10B981',
+        success: '#9DC08B',
+        cream: '#EDF1D6',
+        sage: '#9DC08B',
+        forest: '#40513B',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

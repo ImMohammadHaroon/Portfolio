@@ -123,7 +123,7 @@ const Projects = () => {
                 onClick={() => setActiveFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === category
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg scale-105'
+                    ? 'bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white shadow-lg scale-105'
                     : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md hover:scale-105'
                 }`}
               >
@@ -161,7 +161,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 group-hover:text-[#609966] dark:group-hover:text-[#9DC08B] transition-colors">
                   {project.title}
                 </h3>
                 
@@ -184,7 +184,7 @@ const Projects = () => {
                 {/* View Project Button */}
                 <button
                   onClick={() => navigate(project.link)}
-                  className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
+                  className="inline-flex items-center gap-2 text-[#609966] dark:text-[#9DC08B] font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
                 >
                   <span>View Project</span>
                   <svg
@@ -233,7 +233,7 @@ const Projects = () => {
         <div className="text-center mt-16">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <span>Let's Build Something Together</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
