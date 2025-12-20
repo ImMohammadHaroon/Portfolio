@@ -25,7 +25,7 @@ const Home = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative">
                 <img 
-                  src="/src/assets/about.jpg" 
+                  src="assets/about.jpg" 
                   alt="Mohammad Haroon" 
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
