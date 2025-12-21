@@ -1,167 +1,167 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const skillsRef = useRef(null);
+  // Array of skills with their names and icon URLs (using CDN for official logos)
+  const skills = [
+    {
+      name: 'HTML5',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    },
+    {
+      name: 'CSS3',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    },
+    {
+      name: 'JavaScript',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    },
+    {
+      name: 'React.js',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    },
+    {
+      name: 'Framer Motion',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg',
+    },
+    {
+      name: 'Node.js',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    },
+    {
+      name: 'Tailwind CSS',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    },
+    {
+      name: 'Bootstrap',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    },
+    {
+      name: 'WordPress',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg',
+    },
+    {
+      name: 'Elementor',
+      icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/elementor-icon.png',
+    },
+    {
+      name: 'REST API',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
+    },
+    {
+      name: 'Git',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    },
+    {
+      name: 'GitHub',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+    },
+    {
+      name: 'Webflow',
+      icon: 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/webflow.svg',
+    },
+    {
+      name: 'GSAP',
+      icon: 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/greensock-icon.svg',
+    },
+    {
+      name: 'Python',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    },
+    {
+      name: 'FastAPI',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg',
+    },
+    {
+      name: 'MongoDB',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    },
+    {
+      name: 'WooCommerce',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/woocommerce/woocommerce-original.svg',
+    },
+    {
+      name: 'Flask',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
+    },
+    {
+      name: 'SEO',
+      icon: 'https://cdn-icons-png.flaticon.com/512/8099/8099224.png',
+    },
+  ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
-
-    return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
-      }
-    };
-  }, []);
-
-  const skillsData = {
-    frontend: [
-      { name: 'HTML5', level: 95, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-      { name: 'CSS', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-      { name: 'JavaScript', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-      { name: 'React.js', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Tailwind CSS', level: 88, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-      { name: 'Bootstrap', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
-    ],
-    backend: [
-      { name: 'Node.js', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-      { name: 'Express.js', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-      { name: 'MongoDB', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-      { name: 'Python', level: 75, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-    ],
-    tools: [
-      { name: 'WordPress', level: 92, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
-      { name: 'Git', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-      { name: 'GitHub', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-      { name: 'VS Code', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-    ],
-    other: [
-      { name: 'Figma', level: 75, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-      { name: 'Photoshop', level: 70, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg' },
-      { name: 'MySQL', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-      { name: 'PostgreSQL', level: 75, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-    ],
-  };
-
-  const SkillCard = ({ name, level, icon, index, category }) => {
-    const colors = {
-      frontend: 'from-blue-500 to-indigo-600',
-      backend: 'from-purple-500 to-pink-600',
-      tools: 'from-green-500 to-emerald-600',
-      other: 'from-orange-500 to-red-600',
-    };
-
-    return (
-      <div
-        className={`group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
-        style={{ transitionDelay: `${index * 100}ms` }}
-      >
-        {/* Icon */}
-        <div className={`w-14 h-14 bg-gradient-to-br ${colors[category]} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2`}>
-          <img src={icon} alt={name} className="w-full h-full object-contain" />
-        </div>
-
-        {/* Skill Name */}
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">{name}</h3>
-
-        {/* Progress Bar */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center text-sm">
-            <span className="text-gray-600 dark:text-gray-400">Proficiency</span>
-            <span className={`font-bold bg-gradient-to-r ${colors[category]} bg-clip-text text-transparent`}>
-              {level}%
-            </span>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-            <div
-              className={`h-full bg-gradient-to-r ${colors[category]} rounded-full transition-all duration-1000 ease-out`}
-              style={{ width: isVisible ? `${level}%` : '0%' }}
-            ></div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+  // Duplicate the skills array to create seamless infinite scroll
+  const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section ref={skillsRef} id="skills" className="min-h-screen bg-gray-50 dark:bg-gray-800 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+    <section className="py-20 bg-white dark:bg-gray-900 overflow-hidden">
+      <div className="w-full">
+        {/* Section Header */}
+        <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My Skills
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
+            Technologies and tools I use to bring ideas to life
           </p>
         </div>
 
-        {/* Frontend Skills */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full mr-3"></span>
-            Frontend Development
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillsData.frontend.map((skill, index) => (
-              <SkillCard key={skill.name} {...skill} index={index} category="frontend" />
-            ))}
-          </div>
-        </div>
+        {/* Infinite Scroll Container */}
+        <div className="relative">
+          {/* Gradient overlays for smooth fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
 
-        {/* Backend Skills */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-purple-500 to-pink-600 rounded-full mr-3"></span>
-            Backend Development
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillsData.backend.map((skill, index) => (
-              <SkillCard key={skill.name} {...skill} index={index} category="backend" />
-            ))}
-          </div>
-        </div>
-
-        {/* Tools & Platforms */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-green-500 to-emerald-600 rounded-full mr-3"></span>
-            Tools & Platforms
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skillsData.tools.map((skill, index) => (
-              <SkillCard key={skill.name} {...skill} index={index} category="tools" />
-            ))}
-          </div>
-        </div>
-
-        {/* Other Skills */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-orange-500 to-red-600 rounded-full mr-3"></span>
-            Other Skills
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skillsData.other.map((skill, index) => (
-              <SkillCard key={skill.name} {...skill} index={index} category="other" />
-            ))}
+          {/* Scrolling Skills */}
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex gap-8 py-8"
+              animate={{
+                x: [0, -1 * (skills.length * 160)],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 40,
+                  ease: "linear",
+                },
+              }}
+            >
+              {duplicatedSkills.map((skill, index) => (
+                <SkillCard key={`${skill.name}-${index}`} skill={skill} />
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
+  );
+};
+
+// Skill Card Component
+const SkillCard = ({ skill }) => {
+  return (
+    <motion.div
+      className="flex flex-col items-center justify-center min-w-[140px] p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 group"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      {/* Skill Icon */}
+      <div className="w-16 h-16 mb-4 flex items-center justify-center">
+        <img
+          src={skill.icon}
+          alt={`${skill.name} logo`}
+          className="w-full h-full object-contain filter group-hover:drop-shadow-lg transition-all duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Skill Name */}
+      <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">
+        {skill.name}
+      </h3>
+    </motion.div>
   );
 };
 

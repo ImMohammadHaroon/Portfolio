@@ -12,6 +12,11 @@
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     @apply antialiased;
+    cursor: none;
+  }
+
+  * {
+    cursor: none !important;
   }
 
   h1, h2, h3, h4, h5, h6 {

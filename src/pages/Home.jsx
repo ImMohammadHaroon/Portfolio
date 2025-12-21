@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import SkillsScroll from '../components/SkillsScroll';
+import Skills from '../components/Skills';
 import ExperienceTimeline from '../components/ExperienceTimeline';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
@@ -133,7 +133,7 @@ const Home = () => {
       </section>
 
       {/* Skills Section */}
-      <SkillsScroll />
+      <Skills />
 
       {/* Experience Section */}
       <ExperienceTimeline />
