@@ -1,0 +1,27 @@
+{
+    "name": "DevOwl Portfolio - Mohammad Haroon",
+    "short_name": "DevOwl",
+    "description": "Full Stack Web Developer Portfolio - Mohammad Haroon specializing in React.js, WordPress, and modern web technologies",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#609966",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/src/assets/owl.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "portfolio",
+        "development",
+        "technology"
+    ],
+    "lang": "en-US",
+    "dir": "ltr",
+    "scope": "/",
+    "screenshots": []
+}

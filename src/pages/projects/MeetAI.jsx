@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEOHead from '../../components/SEOHead';
 import MeetAIImage from '../../assets/Meet-ai.png';
 
 const MeetAI = () => {
@@ -15,13 +16,35 @@ const MeetAI = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <SEOHead
+        title="Meet AI Project - Mohammad Haroon | DevOwl Portfolio"
+        description="Meet AI: AI-powered meeting assistant by DevOwl (Mohammad Haroon). Transform physical meeting recordings into searchable knowledge with speech recognition, speaker identification, and intelligent chatbots. Full Stack Development project."
+        keywords="Meet AI, DevOwl project, AI meeting assistant, speech recognition, speaker identification, Mohammad Haroon, Full Stack Developer, React, Python, Machine Learning"
+        canonicalUrl="https://devowl.me/project/meet-ai"
+        ogType="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Meet AI: Intelligent Meeting Assistant",
+          "author": {
+            "@type": "Person",
+            "name": "Mohammad Haroon",
+            "alternateName": "DevOwl"
+          },
+          "description": "AI-powered platform that transforms physical meeting recordings into searchable knowledge with transcription, speaker identification, and intelligent chatbots.",
+          "keywords": "AI, Machine Learning, Speech Recognition, NLP, Full Stack Development",
+          "datePublished": "2025-12-01",
+          "programmingLanguage": ["JavaScript", "Python", "React"],
+          "applicationCategory": "BusinessApplication"
+        }}
+      />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="relative bg-white dark:bg-black py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-900 dark:to-black"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJWMzRoLTJ6bTAtNGgydi0yaC0ydjJ6bS00IDBoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
-        
+
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-4">
@@ -33,7 +56,7 @@ const MeetAI = () => {
               Meet AI: Intelligent Meeting Assistant
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Transforming physical meeting recordings into searchable knowledge with AI-powered transcription, 
+              Transforming physical meeting recordings into searchable knowledge with AI-powered transcription,
               speaker identification, and intelligent chatbots.
             </p>
           </div>
@@ -45,9 +68,9 @@ const MeetAI = () => {
         {/* Featured Image */}
         <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src={MeetAIImage} 
-              alt="Meet AI Platform Interface" 
+            <img
+              src={MeetAIImage}
+              alt="Meet AI Platform Interface"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -61,14 +84,14 @@ const MeetAI = () => {
               Project Overview
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              In today's fast-paced business environment, valuable insights from in-person meetings often get lost in translation 
-              or buried in handwritten notes. Meet AI was designed to solve this fundamental challenge by transforming physical 
+              In today's fast-paced business environment, valuable insights from in-person meetings often get lost in translation
+              or buried in handwritten notes. Meet AI was designed to solve this fundamental challenge by transforming physical
               meeting recordings into an intelligent, searchable knowledge base that enhances productivity and collaboration.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8">
-              Meet AI is an advanced intelligent assistant that processes uploaded audio recordings from multiple participants 
-              within a single meeting. Using state-of-the-art speech recognition and natural language processing technologies, 
-              the platform converts raw audio into accurate transcripts with speaker identification, timestamps, and concise 
+              Meet AI is an advanced intelligent assistant that processes uploaded audio recordings from multiple participants
+              within a single meeting. Using state-of-the-art speech recognition and natural language processing technologies,
+              the platform converts raw audio into accurate transcripts with speaker identification, timestamps, and concise
               summaries of key discussions, decisions, and action items.
             </p>
           </div>
@@ -111,7 +134,7 @@ const MeetAI = () => {
               Technical Solution
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              Meet AI leverages a sophisticated technical architecture combining multiple AI technologies to deliver 
+              Meet AI leverages a sophisticated technical architecture combining multiple AI technologies to deliver
               a seamless experience:
             </p>
 
@@ -124,13 +147,13 @@ const MeetAI = () => {
                 Advanced Speech Recognition
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                At the core of Meet AI is a robust automatic speech recognition (ASR) engine that handles multiple audio 
-                formats and quality levels. The system uses deep learning models trained on diverse datasets to ensure 
+                At the core of Meet AI is a robust automatic speech recognition (ASR) engine that handles multiple audio
+                formats and quality levels. The system uses deep learning models trained on diverse datasets to ensure
                 high accuracy across different accents, speaking styles, and audio conditions.
               </p>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
                 <p className="text-gray-600 dark:text-gray-400 italic">
-                  "The ASR system achieves word error rates below 5% for clear audio and gracefully degrades for 
+                  "The ASR system achieves word error rates below 5% for clear audio and gracefully degrades for
                   challenging conditions, ensuring reliable transcription quality."
                 </p>
               </div>
@@ -145,8 +168,8 @@ const MeetAI = () => {
                 Intelligent Speaker Diarization
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                One of the most technically challenging aspects was implementing speaker diarization—the ability to 
-                determine "who spoke when" without prior training. Meet AI employs neural embeddings to create unique 
+                One of the most technically challenging aspects was implementing speaker diarization—the ability to
+                determine "who spoke when" without prior training. Meet AI employs neural embeddings to create unique
                 voice signatures for each speaker, clustering similar voice patterns together to identify distinct participants.
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300 ml-6">
@@ -213,8 +236,8 @@ const MeetAI = () => {
                 Custom Meeting Chatbot
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Perhaps the most innovative feature of Meet AI is the custom chatbot generated for each meeting. 
-                Using the transcript and meeting context, the system creates an intelligent assistant that can 
+                Perhaps the most innovative feature of Meet AI is the custom chatbot generated for each meeting.
+                Using the transcript and meeting context, the system creates an intelligent assistant that can
                 answer questions about the meeting in natural language.
               </p>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-indigo-600 mb-4">
@@ -241,8 +264,8 @@ const MeetAI = () => {
                 </ul>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                The chatbot uses semantic search and retrieval-augmented generation (RAG) to provide accurate, 
-                contextual responses with timestamp references, allowing users to jump directly to relevant 
+                The chatbot uses semantic search and retrieval-augmented generation (RAG) to provide accurate,
+                contextual responses with timestamp references, allowing users to jump directly to relevant
                 sections of the meeting.
               </p>
             </div>
@@ -368,17 +391,17 @@ const MeetAI = () => {
               <span className="w-2 h-8 bg-gradient-to-b from-red-600 to-pink-600 rounded-full"></span>
               Technical Challenges & Solutions
             </h2>
-            
+
             <div className="space-y-6 mb-8">
               <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/10 dark:to-pink-900/10 rounded-xl p-6 border-l-4 border-red-600">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Audio Synchronization</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  When multiple participants record audio independently, the files are rarely synchronized, making it 
+                  When multiple participants record audio independently, the files are rarely synchronized, making it
                   difficult to create a coherent timeline of the meeting.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented audio alignment 
-                  algorithms using cross-correlation techniques to detect overlapping speech patterns and automatically 
+                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented audio alignment
+                  algorithms using cross-correlation techniques to detect overlapping speech patterns and automatically
                   synchronize timelines with sub-second accuracy.
                 </p>
               </div>
@@ -386,12 +409,12 @@ const MeetAI = () => {
               <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900/10 dark:to-yellow-900/10 rounded-xl p-6 border-l-4 border-orange-600">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Real-time Processing</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  Processing hours of audio through multiple AI models (ASR, diarization, NLP) is computationally 
+                  Processing hours of audio through multiple AI models (ASR, diarization, NLP) is computationally
                   intensive and time-consuming.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Designed a distributed 
-                  processing pipeline using Celery workers and Redis queues, enabling parallel processing of audio 
+                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Designed a distributed
+                  processing pipeline using Celery workers and Redis queues, enabling parallel processing of audio
                   segments. Optimized model inference with quantization and batching, reducing processing time by 60%.
                 </p>
               </div>
@@ -399,12 +422,12 @@ const MeetAI = () => {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-xl p-6 border-l-4 border-blue-600">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Speaker Differentiation</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  Distinguishing between speakers with similar voice characteristics or in noisy environments proved 
+                  Distinguishing between speakers with similar voice characteristics or in noisy environments proved
                   challenging with standard diarization models.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Developed a hybrid approach 
-                  combining speaker embeddings with contextual NLP analysis. The system uses conversational patterns 
+                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Developed a hybrid approach
+                  combining speaker embeddings with contextual NLP analysis. The system uses conversational patterns
                   (turn-taking, topic continuity) to improve speaker attribution accuracy by 25%.
                 </p>
               </div>
@@ -415,8 +438,8 @@ const MeetAI = () => {
                   Large language models can generate plausible-sounding but incorrect answers when queried about meeting content.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented RAG (Retrieval-Augmented 
-                  Generation) architecture with strict grounding. The chatbot only answers based on retrieved transcript segments 
+                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented RAG (Retrieval-Augmented
+                  Generation) architecture with strict grounding. The chatbot only answers based on retrieved transcript segments
                   and always cites timestamps, drastically reducing hallucinations while maintaining conversational quality.
                 </p>
               </div>
@@ -453,13 +476,13 @@ const MeetAI = () => {
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              Meet AI has fundamentally transformed how teams handle in-person meeting documentation. By automating 
-              transcription, summarization, and information retrieval, teams can focus on meaningful discussions rather 
-              than note-taking. The custom chatbot feature has proven particularly valuable, enabling instant access to 
+              Meet AI has fundamentally transformed how teams handle in-person meeting documentation. By automating
+              transcription, summarization, and information retrieval, teams can focus on meaningful discussions rather
+              than note-taking. The custom chatbot feature has proven particularly valuable, enabling instant access to
               meeting insights without reviewing hours of recordings.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              The platform has been used to process over 1,000 hours of meeting audio, generating actionable insights 
+              The platform has been used to process over 1,000 hours of meeting audio, generating actionable insights
               and saving countless hours of manual work for teams across various industries.
             </p>
           </div>
@@ -509,12 +532,12 @@ const MeetAI = () => {
             <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-3xl font-bold mb-4">Transforming Meetings into Knowledge</h2>
               <p className="text-lg leading-relaxed mb-6 text-white/90">
-                Meet AI represents a significant step forward in making physical meeting content as accessible and 
-                searchable as digital communication. By combining advanced AI technologies with thoughtful UX design, 
+                Meet AI represents a significant step forward in making physical meeting content as accessible and
+                searchable as digital communication. By combining advanced AI technologies with thoughtful UX design,
                 the platform empowers teams to extract maximum value from their in-person collaborations.
               </p>
               <p className="text-lg leading-relaxed text-white/90">
-                This project showcases the power of modern AI to solve real-world problems, demonstrating expertise 
+                This project showcases the power of modern AI to solve real-world problems, demonstrating expertise
                 in speech recognition, natural language processing, distributed systems, and full-stack development.
               </p>
             </div>
