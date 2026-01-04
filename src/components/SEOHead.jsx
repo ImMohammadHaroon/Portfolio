@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 
 const SEOHead = ({
     title = 'DevOwl Portfolio - Mohammad Haroon | Full Stack Web Developer',
@@ -8,44 +7,55 @@ const SEOHead = ({
     canonicalUrl = 'https://devowl.me/',
     ogImage = 'https://devowl.me/og-image.jpg',
     ogType = 'website',
-    structuredData = null,
 }) => {
-    return (
-        <Helmet>
-            {/* Primary Meta Tags */}
-            <title>{title}</title>
-            <meta name="title" content={title} />
-            <meta name="description" content={description} />
-            <meta name="keywords" content={keywords} />
+    useEffect(() => {
+        // Update document title
+        document.title = title;
 
-            {/* Canonical URL */}
-            <link rel="canonical" href={canonicalUrl} />
+        // Update or create meta tags
+        const updateMetaTag = (name, content, isProperty = false) => {
+            const attribute = isProperty ? 'property' : 'name';
+            let element = document.querySelector(`meta[${attribute}="${name}"]`);
 
-            {/* Open Graph / Facebook */}
-            <meta property="og:type" content={ogType} />
-            <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={ogImage} />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-            <meta property="og:site_name" content="DevOwl Portfolio" />
+            if (element) {
+                element.setAttribute('content', content);
+            } else {
+                element = document.createElement('meta');
+                element.setAttribute(attribute, name);
+                element.setAttribute('content', content);
+                document.head.appendChild(element);
+            }
+        };
 
-            {/* Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:url" content={canonicalUrl} />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={ogImage} />
+        // Update meta description
+        updateMetaTag('description', description);
+        updateMetaTag('keywords', keywords);
 
-            {/* Structured Data */}
-            {structuredData && (
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
-            )}
-        </Helmet>
-    );
+        // Update Open Graph tags
+        updateMetaTag('og:title', title, true);
+        updateMetaTag('og:description', description, true);
+        updateMetaTag('og:url', canonicalUrl, true);
+        updateMetaTag('og:image', ogImage, true);
+        updateMetaTag('og:type', ogType, true);
+
+        // Update Twitter Card tags
+        updateMetaTag('twitter:title', title);
+        updateMetaTag('twitter:description', description);
+        updateMetaTag('twitter:image', ogImage);
+
+        // Update canonical link
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+            canonical.setAttribute('href', canonicalUrl);
+        } else {
+            canonical = document.createElement('link');
+            canonical.setAttribute('rel', 'canonical');
+            canonical.setAttribute('href', canonicalUrl);
+            document.head.appendChild(canonical);
+        }
+    }, [title, description, keywords, canonicalUrl, ogImage, ogType]);
+
+    return null;
 };
 
 export default SEOHead;
