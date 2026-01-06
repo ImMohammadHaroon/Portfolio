@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
 import Home from './pages/Home';
@@ -26,6 +27,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <SpeedInsights />
+      <Analytics />
       <CustomCursor />
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Routes>
