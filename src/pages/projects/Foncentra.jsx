@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
-import FoncentraImage from '../../assets/foncentra.jpg';
+import FoncentraImage from '../../assets/foncentra.webp';
 
 const Foncentra = () => {
   const navigate = useNavigate();

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import MeetAIImage from '../assets/Meet-ai.png';
-import SyeenImage from '../assets/Syeen.png';
-import EcommerceImage from '../assets/EcommerceProject.png';
-import FoncentraImage from '../assets/foncentra.jpg';
-import EmpireImage from '../assets/empire-solution.jpg';
-import ApertureImage from '../assets/bluelines-lifeline-rag.jpg';
+import MeetAIImage from '../assets/meeting-ai.webp';
+import SyeenImage from '../assets/Syeen.webp';
+import EcommerceImage from '../assets/EcommerceProject.webp';
+import FoncentraImage from '../assets/foncentra.webp';
+import EmpireImage from '../assets/empire-solution.webp';
+import ApertureImage from '../assets/bluelines-lifeline-rag.webp';
 
 const Projects = () => {
   const navigate = useNavigate();

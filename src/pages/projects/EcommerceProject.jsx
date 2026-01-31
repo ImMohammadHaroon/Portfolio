@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
-import EcommerceImage from '../../assets/EcommerceProject.png';
+import EcommerceImage from '../../assets/EcommerceProject.webp';
 
 const EcommerceProject = () => {
   const navigate = useNavigate();
