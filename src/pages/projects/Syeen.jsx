@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEOHead from '../../components/SEOHead';
 import SyeenImage from '../../assets/Syeen.png';
 
 const Syeen = () => {
@@ -15,13 +16,48 @@ const Syeen = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <SEOHead
+        title="Syeen - Talent & Business Collaboration Platform | Mohammad Haroon Portfolio"
+        description="Syeen: A comprehensive WordPress-powered talent and business collaboration platform featuring intelligent job matching, real-time application tracking, and dual-sided dashboards. Built by Mohammad Haroon."
+        keywords="Syeen, Job Portal, Talent Platform, WordPress, Elementor, PHP, Business Collaboration, Application Tracking, Hiring Platform, Mohammad Haroon"
+        canonicalUrl="https://devowl.me/project/syeen"
+        ogType="article"
+        publishedDate="2025-10-15"
+        modifiedDate="2026-01-31"
+        breadcrumbs={[
+          { name: "Home", url: "https://devowl.me/" },
+          { name: "Projects", url: "https://devowl.me/#projects" },
+          { name: "Syeen", url: "https://devowl.me/project/syeen" }
+        ]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Syeen: Talent & Business Collaboration Platform",
+          "author": {
+            "@type": "Person",
+            "name": "Mohammad Haroon",
+            "url": "https://devowl.me"
+          },
+          "description": "A comprehensive WordPress-powered platform connecting businesses with top talent through intelligent job matching, streamlined applications, and real-time collaboration tools.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "keywords": "WordPress, PHP, Elementor, Job Portal, Talent Management",
+          "datePublished": "2025-10-15",
+          "programmingLanguage": ["PHP", "JavaScript", "HTML", "CSS"]
+        }}
+      />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="relative bg-white dark:bg-black py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-900 dark:to-black"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJWMzRoLTJ6bTAtNGgydi0yaC0ydjJ6bS00IDBoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
-        
+
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-4">
@@ -33,7 +69,7 @@ const Syeen = () => {
               Syeen: Talent & Business Collaboration Platform
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A comprehensive WordPress-powered platform connecting businesses with top talent through 
+              A comprehensive WordPress-powered platform connecting businesses with top talent through
               intelligent job matching, streamlined applications, and real-time collaboration tools.
             </p>
           </div>
@@ -45,10 +81,14 @@ const Syeen = () => {
         {/* Featured Image */}
         <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src={SyeenImage} 
-              alt="Syeen Platform Interface" 
+            <img
+              src={SyeenImage}
+              alt="Syeen Platform Interface"
               className="w-full h-auto object-cover"
+              loading="lazy"
+              width="1024"
+              height="576"
+              decoding="async"
             />
           </div>
         </div>
@@ -57,18 +97,18 @@ const Syeen = () => {
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-yellow-600 to-orange-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Project Overview
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              In today's competitive job market, finding the right talent or the perfect opportunity can be overwhelming. 
-              Syeen was created to bridge this gap by providing a sophisticated yet user-friendly platform where businesses 
+              In today's competitive job market, finding the right talent or the perfect opportunity can be overwhelming.
+              Syeen was created to bridge this gap by providing a sophisticated yet user-friendly platform where businesses
               can showcase opportunities and talented professionals can discover their next career move with confidence.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8">
-              Syeen is a full-featured talent and business collaboration platform built on WordPress, leveraging Elementor 
-              for stunning visual design and custom PHP development for powerful backend functionality. The platform enables 
-              businesses to post job opportunities, manage applications, and discover talent, while empowering professionals 
+              Syeen is a full-featured talent and business collaboration platform built on WordPress, leveraging Elementor
+              for stunning visual design and custom PHP development for powerful backend functionality. The platform enables
+              businesses to post job opportunities, manage applications, and discover talent, while empowering professionals
               to create compelling profiles, browse opportunities, and track their applications in real-time.
             </p>
           </div>
@@ -76,7 +116,7 @@ const Syeen = () => {
           {/* The Challenge */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-red-600 to-pink-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               The Challenge
             </h2>
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 mb-8 border border-gray-200 dark:border-gray-700">
@@ -85,19 +125,19 @@ const Syeen = () => {
               </p>
               <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
                   <span><strong className="text-gray-900 dark:text-white">Dual User Experience:</strong> Creating intuitive workflows for two distinct user types—businesses posting jobs and talents searching for opportunities—each with different needs and expectations.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
                   <span><strong className="text-gray-900 dark:text-white">Application Management:</strong> Implementing a robust system to handle high volumes of job applications with real-time status updates and seamless communication between parties.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
                   <span><strong className="text-gray-900 dark:text-white">User Authentication & Security:</strong> Ensuring secure registration, login, and data protection for sensitive professional information and business details.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-pink-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
                   <span><strong className="text-gray-900 dark:text-white">Scalability:</strong> Building on WordPress while maintaining performance and scalability to handle growing user bases and increasing job listings.</span>
                 </li>
               </ul>
@@ -107,30 +147,30 @@ const Syeen = () => {
           {/* Technical Solution */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-blue-600 to-cyan-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technical Solution
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              Syeen leverages the power and flexibility of WordPress combined with custom development to create a 
+              Syeen leverages the power and flexibility of WordPress combined with custom development to create a
               feature-rich platform that's both powerful and maintainable:
             </p>
 
             {/* WordPress & Elementor */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
                 WordPress & Elementor Integration
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Built on WordPress for its robust content management capabilities and extensive ecosystem, the platform 
-                utilizes Elementor Pro to create stunning, responsive landing pages and user interfaces without sacrificing 
+                Built on WordPress for its robust content management capabilities and extensive ecosystem, the platform
+                utilizes Elementor Pro to create stunning, responsive landing pages and user interfaces without sacrificing
                 performance. This combination allows for rapid design iterations while maintaining professional aesthetics.
               </p>
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
                 <p className="text-gray-600 dark:text-gray-400 italic">
-                  "The Elementor integration enabled creation of visually compelling job listings and profile pages 
+                  "The Elementor integration enabled creation of visually compelling job listings and profile pages
                   that adapt seamlessly across all devices, enhancing user engagement by 40%."
                 </p>
               </div>
@@ -139,7 +179,7 @@ const Syeen = () => {
             {/* Custom PHP Development */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
                 Custom PHP Backend Architecture
@@ -149,19 +189,19 @@ const Syeen = () => {
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300 ml-6">
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Custom post types for Jobs, Applications, and User Profiles</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Advanced meta box implementation for structured data storage</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Custom REST API endpoints for real-time application tracking</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Role-based access control with custom capabilities</span>
                 </li>
               </ul>
@@ -170,7 +210,7 @@ const Syeen = () => {
             {/* User Registration System */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                 </svg>
                 Sophisticated User Management
@@ -179,13 +219,13 @@ const Syeen = () => {
                 The platform features a comprehensive user registration and authentication system tailored to different user types:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">For Businesses</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Company profile creation, team member management, job posting dashboard, and applicant tracking system.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">For Talent</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Professional profile builder, resume upload, portfolio showcase, saved jobs, and application history tracking.
@@ -197,7 +237,7 @@ const Syeen = () => {
             {/* Job Listing System */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Dynamic Job Listing Engine
@@ -205,25 +245,25 @@ const Syeen = () => {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Developed a sophisticated job posting and discovery system with advanced filtering and search capabilities:
               </p>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-yellow-600 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-[#609966] mb-4">
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   <strong className="text-gray-900 dark:text-white">Key Features:</strong>
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-600 font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
                     <span>Advanced search with filters by location, industry, experience level, and salary range</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-600 font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
                     <span>Rich text job descriptions with media support and formatting options</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-600 font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
                     <span>Automated job expiry and renewal system</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-600 font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
                     <span>Featured job listings with promotional capabilities</span>
                   </li>
                 </ul>
@@ -233,27 +273,27 @@ const Syeen = () => {
             {/* Real-time Application Tracking */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
                 Real-Time Application Tracking
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                One of Syeen's standout features is its comprehensive application management system that provides transparency 
+                One of Syeen's standout features is its comprehensive application management system that provides transparency
                 and keeps both parties informed throughout the hiring process:
               </p>
               <div className="space-y-3">
-                <div className="bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 rounded-lg p-4 border-l-4 border-yellow-600">
+                <div className="bg-gradient-to-r from-gray-100 to-green-50 dark:from-gray-900/30 dark:to-green-900/30 rounded-lg p-4 border-l-4 border-[#609966]">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">For Applicants</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    Real-time status updates (Applied → Reviewed → Interview → Offer), instant notifications, and direct 
+                    Real-time status updates (Applied → Reviewed → Interview → Offer), instant notifications, and direct
                     messaging with hiring managers.
                   </p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-lg p-4 border-l-4 border-blue-600">
+                <div className="bg-gradient-to-r from-gray-100 to-green-50 dark:from-gray-900/30 dark:to-green-900/30 rounded-lg p-4 border-l-4 border-[#609966]">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">For Businesses</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    Centralized dashboard to review applications, update statuses, schedule interviews, and communicate 
+                    Centralized dashboard to review applications, update statuses, schedule interviews, and communicate
                     with candidates efficiently.
                   </p>
                 </div>
@@ -264,7 +304,7 @@ const Syeen = () => {
           {/* Technical Stack */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technology Stack
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -272,7 +312,7 @@ const Syeen = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Core Technologies</h4>
                 <div className="flex flex-wrap gap-2">
                   {['WordPress', 'PHP', 'MySQL', 'Elementor Pro', 'WooCommerce', 'REST API'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 text-yellow-700 dark:text-yellow-300 text-sm font-medium rounded-full border border-yellow-200 dark:border-yellow-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -282,7 +322,7 @@ const Syeen = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Frontend</h4>
                 <div className="flex flex-wrap gap-2">
                   {['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'AJAX', 'Bootstrap'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-full border border-blue-200 dark:border-blue-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -292,7 +332,7 @@ const Syeen = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Plugins & Extensions</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Advanced Custom Fields', 'Contact Form 7', 'Yoast SEO', 'WP Mail SMTP'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-red-100 to-pink-100 dark:from-red-900/30 dark:to-pink-900/30 text-red-700 dark:text-red-300 text-sm font-medium rounded-full border border-red-200 dark:border-red-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -302,7 +342,7 @@ const Syeen = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Infrastructure</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Apache', 'Linux', 'cPanel', 'SSL/TLS', 'CDN', 'Cloudflare'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-full border border-green-200 dark:border-green-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -314,7 +354,7 @@ const Syeen = () => {
           {/* Key Features */}
           <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Key Features
             </h2>
             <div className="space-y-4 mb-8">
@@ -361,7 +401,7 @@ const Syeen = () => {
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex gap-4 items-start bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feature.icon} />
                     </svg>
@@ -378,57 +418,57 @@ const Syeen = () => {
           {/* Technical Challenges */}
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technical Challenges & Solutions
             </h2>
-            
+
             <div className="space-y-6 mb-8">
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-xl p-6 border-l-4 border-yellow-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: WordPress Performance at Scale</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  As the platform grew with thousands of job listings and user profiles, maintaining fast page load times 
+                  As the platform grew with thousands of job listings and user profiles, maintaining fast page load times
                   and database performance became critical.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-yellow-600 dark:text-yellow-400">Solution:</strong> Implemented comprehensive 
-                  caching strategies using object caching, transient API, and CDN integration. Optimized database queries 
+                  <strong className="text-[#609966]">Solution:</strong> Implemented comprehensive
+                  caching strategies using object caching, transient API, and CDN integration. Optimized database queries
                   with custom indexes and query optimization, reducing page load times by 65%.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/10 dark:to-pink-900/10 rounded-xl p-6 border-l-4 border-red-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Real-time Updates Without Page Refresh</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Users expected to see application status updates and new job postings without constantly refreshing their browsers.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-red-600 dark:text-red-400">Solution:</strong> Developed custom AJAX handlers 
-                  combined with WordPress REST API endpoints to enable real-time data updates. Implemented polling mechanisms 
+                  <strong className="text-[#609966]">Solution:</strong> Developed custom AJAX handlers
+                  combined with WordPress REST API endpoints to enable real-time data updates. Implemented polling mechanisms
                   for notifications and used browser notifications API for instant alerts.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-xl p-6 border-l-4 border-blue-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Complex User Permissions</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
-                  Managing different permission levels for businesses (who can post jobs), talents (who can apply), and 
+                  Managing different permission levels for businesses (who can post jobs), talents (who can apply), and
                   administrators required sophisticated role management.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-blue-600 dark:text-blue-400">Solution:</strong> Extended WordPress's built-in 
-                  roles and capabilities system with custom roles and granular permissions. Created middleware to check 
+                  <strong className="text-[#609966]">Solution:</strong> Extended WordPress's built-in
+                  roles and capabilities system with custom roles and granular permissions. Created middleware to check
                   capabilities before allowing actions, ensuring data security and proper access control.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 rounded-xl p-6 border-l-4 border-green-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Mobile Responsiveness with Elementor</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Ensuring complex job listings and application forms looked great and functioned properly across all device sizes.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-green-600 dark:text-green-400">Solution:</strong> Utilized Elementor's responsive 
-                  controls combined with custom CSS media queries and mobile-first design principles. Implemented progressive 
+                  <strong className="text-[#609966]">Solution:</strong> Utilized Elementor's responsive
+                  controls combined with custom CSS media queries and mobile-first design principles. Implemented progressive
                   enhancement to ensure core functionality worked on all devices, with enhanced features for larger screens.
                 </p>
               </div>
@@ -438,26 +478,26 @@ const Syeen = () => {
           {/* Impact & Results */}
           <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-teal-600 to-cyan-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Impact & Results
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-xl p-8 border border-yellow-200 dark:border-yellow-800 text-center">
-                <div className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">2,500+</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">2,500+</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">Active Users</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   businesses and talent registered
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 rounded-xl p-8 border border-red-200 dark:border-red-800 text-center">
-                <div className="text-4xl font-bold text-red-600 dark:text-red-400 mb-2">850+</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">850+</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">Job Listings</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   posted across various industries
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800 text-center">
-                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">92%</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">92%</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">User Satisfaction</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   based on feedback surveys
@@ -465,13 +505,13 @@ const Syeen = () => {
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              Syeen has successfully bridged the gap between businesses and talent, creating a thriving ecosystem where 
-              opportunities are discovered and careers are built. The platform has facilitated hundreds of successful hires, 
+              Syeen has successfully bridged the gap between businesses and talent, creating a thriving ecosystem where
+              opportunities are discovered and careers are built. The platform has facilitated hundreds of successful hires,
               with businesses praising the quality of applicants and talent appreciating the streamlined application process.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              The real-time application tracking feature has been particularly well-received, with users reporting a 40% 
-              reduction in follow-up emails and phone calls. Businesses appreciate the organized dashboard that keeps all 
+              The real-time application tracking feature has been particularly well-received, with users reporting a 40%
+              reduction in follow-up emails and phone calls. Businesses appreciate the organized dashboard that keeps all
               candidate information in one place, while job seekers value the transparency and instant updates.
             </p>
           </div>
@@ -479,36 +519,36 @@ const Syeen = () => {
           {/* Future Enhancements */}
           <div className={`transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Future Enhancements
             </h2>
             <ul className="space-y-4 text-gray-700 dark:text-gray-300 mb-8">
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">AI-Powered Matching:</strong> Implement machine learning algorithms to automatically match talent with relevant job opportunities based on skills, experience, and preferences.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Video Interviews:</strong> Integrate video interviewing capabilities allowing businesses to conduct initial screening interviews directly through the platform.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Freelance Marketplace:</strong> Expand beyond full-time positions to include project-based work and freelance opportunities with integrated payment processing.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Advanced Analytics:</strong> Provide businesses with detailed analytics on job posting performance, applicant demographics, and hiring funnel insights.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Mobile App:</strong> Develop native iOS and Android applications for on-the-go job searching and application management.</span>
@@ -518,16 +558,16 @@ const Syeen = () => {
 
           {/* Conclusion */}
           <div className={`transition-all duration-1000 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-3xl font-bold mb-4">Connecting Talent with Opportunity</h2>
               <p className="text-lg leading-relaxed mb-6 text-white/90">
-                Syeen demonstrates the power of WordPress as a foundation for complex, feature-rich web applications. 
-                By combining the flexibility of WordPress with custom PHP development and modern design practices, the 
+                Syeen demonstrates the power of WordPress as a foundation for complex, feature-rich web applications.
+                By combining the flexibility of WordPress with custom PHP development and modern design practices, the
                 platform delivers an enterprise-level experience that serves both businesses and talent effectively.
               </p>
               <p className="text-lg leading-relaxed text-white/90">
-                This project showcases expertise in full-stack WordPress development, custom plugin creation, database 
-                optimization, and user experience design, creating a platform that makes the hiring process more transparent, 
+                This project showcases expertise in full-stack WordPress development, custom plugin creation, database
+                optimization, and user experience design, creating a platform that makes the hiring process more transparent,
                 efficient, and successful for everyone involved.
               </p>
             </div>
@@ -547,7 +587,7 @@ const Syeen = () => {
           </button>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             Back to Top
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

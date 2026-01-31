@@ -17,25 +17,38 @@ const MeetAI = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <SEOHead
-        title="Meet AI Project - Mohammad Haroon | DevOwl Portfolio"
-        description="Meet AI: AI-powered meeting assistant by DevOwl (Mohammad Haroon). Transform physical meeting recordings into searchable knowledge with speech recognition, speaker identification, and intelligent chatbots. Full Stack Development project."
-        keywords="Meet AI, DevOwl project, AI meeting assistant, speech recognition, speaker identification, Mohammad Haroon, Full Stack Developer, React, Python, Machine Learning"
+        title="Meet AI - AI-Powered Meeting Assistant | Mohammad Haroon Portfolio"
+        description="Meet AI: An intelligent meeting assistant that transforms physical meeting recordings into searchable knowledge using speech recognition, speaker identification, and AI chatbots. Full Stack Development project by Mohammad Haroon."
+        keywords="Meet AI, AI meeting assistant, speech recognition, speaker identification, NLP, transcription, Mohammad Haroon, Full Stack Developer, React, Python, Machine Learning"
         canonicalUrl="https://devowl.me/project/meet-ai"
         ogType="article"
+        publishedDate="2025-12-01"
+        modifiedDate="2026-01-31"
+        breadcrumbs={[
+          { name: "Home", url: "https://devowl.me/" },
+          { name: "Projects", url: "https://devowl.me/#projects" },
+          { name: "Meet AI", url: "https://devowl.me/project/meet-ai" }
+        ]}
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "CreativeWork",
+          "@type": "SoftwareApplication",
           "name": "Meet AI: Intelligent Meeting Assistant",
           "author": {
             "@type": "Person",
             "name": "Mohammad Haroon",
-            "alternateName": "DevOwl"
+            "url": "https://devowl.me"
           },
           "description": "AI-powered platform that transforms physical meeting recordings into searchable knowledge with transcription, speaker identification, and intelligent chatbots.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
           "keywords": "AI, Machine Learning, Speech Recognition, NLP, Full Stack Development",
           "datePublished": "2025-12-01",
-          "programmingLanguage": ["JavaScript", "Python", "React"],
-          "applicationCategory": "BusinessApplication"
+          "programmingLanguage": ["JavaScript", "Python", "React", "TypeScript"]
         }}
       />
       <Navbar />
@@ -72,6 +85,10 @@ const MeetAI = () => {
               src={MeetAIImage}
               alt="Meet AI Platform Interface"
               className="w-full h-auto object-cover"
+              loading="lazy"
+              width="1024"
+              height="576"
+              decoding="async"
             />
           </div>
         </div>
@@ -80,7 +97,7 @@ const MeetAI = () => {
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Project Overview
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
@@ -99,7 +116,7 @@ const MeetAI = () => {
           {/* The Challenge */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-pink-600 to-orange-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               The Challenge
             </h2>
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 mb-8 border border-gray-200 dark:border-gray-700">
@@ -108,19 +125,19 @@ const MeetAI = () => {
               </p>
               <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
                   <span><strong className="text-gray-900 dark:text-white">Multiple Audio Sources:</strong> Each participant may record audio on their own device, creating multiple unsynchronized audio files that need to be processed cohesively.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
                   <span><strong className="text-gray-900 dark:text-white">Speaker Diarization:</strong> Identifying who said what without predefined speaker profiles, especially in environments with overlapping speech and varying audio quality.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-pink-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
                   <span><strong className="text-gray-900 dark:text-white">Information Retrieval:</strong> Making meeting content searchable and queryable so teams can quickly find specific discussions without reviewing hours of audio.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
                   <span><strong className="text-gray-900 dark:text-white">Actionable Insights:</strong> Automatically extracting decisions, action items, and key discussion points from unstructured conversations.</span>
                 </li>
               </ul>
@@ -130,7 +147,7 @@ const MeetAI = () => {
           {/* Technical Solution */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-blue-600 to-cyan-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technical Solution
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
@@ -141,7 +158,7 @@ const MeetAI = () => {
             {/* Speech Recognition */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                 </svg>
                 Advanced Speech Recognition
@@ -162,7 +179,7 @@ const MeetAI = () => {
             {/* Speaker Identification */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
                 Intelligent Speaker Diarization
@@ -178,11 +195,11 @@ const MeetAI = () => {
                   <span>Real-time speaker change detection with high precision</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Automatic speaker labeling (Speaker 1, Speaker 2, etc.)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-1.5">▸</span>
+                  <span className="text-[#609966] mt-1.5">▸</span>
                   <span>Optional name assignment for known participants</span>
                 </li>
               </ul>
@@ -191,7 +208,7 @@ const MeetAI = () => {
             {/* NLP & Summarization */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Natural Language Processing & Summarization
@@ -200,25 +217,25 @@ const MeetAI = () => {
                 Beyond simple transcription, Meet AI uses advanced NLP techniques to extract meaningful insights:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-indigo-200 dark:border-indigo-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Meeting Summaries</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Abstractive summarization generates concise overviews highlighting key topics, decisions, and outcomes.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 rounded-lg p-6 border border-pink-200 dark:border-pink-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Action Item Extraction</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Automatically identifies tasks, assignments, and deadlines mentioned during discussions.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Decision Tracking</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Identifies and highlights critical decisions made, along with the rationale and participants involved.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
+                <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Topic Segmentation</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     Breaks down meetings into logical topic sections for easier navigation and reference.
@@ -230,7 +247,7 @@ const MeetAI = () => {
             {/* Custom Chatbot */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
                 Custom Meeting Chatbot
@@ -240,13 +257,13 @@ const MeetAI = () => {
                 Using the transcript and meeting context, the system creates an intelligent assistant that can
                 answer questions about the meeting in natural language.
               </p>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-indigo-600 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-[#609966] mb-4">
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   <strong className="text-gray-900 dark:text-white">Example queries the chatbot can handle:</strong>
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
-                    <span className="text-indigo-600 font-mono text-sm mt-0.5">❯</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">❯</span>
                     <span className="italic">"What was the main decision regarding backend scalability?"</span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -258,7 +275,7 @@ const MeetAI = () => {
                     <span className="italic">"What did Sarah mention about the project timeline?"</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-indigo-600 font-mono text-sm mt-0.5">❯</span>
+                    <span className="text-[#609966] font-mono text-sm mt-0.5">❯</span>
                     <span className="italic">"Summarize the discussion about AI integration"</span>
                   </li>
                 </ul>
@@ -274,7 +291,7 @@ const MeetAI = () => {
           {/* Technical Stack */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technology Stack
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -282,7 +299,7 @@ const MeetAI = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">AI & Machine Learning</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Whisper AI', 'PyTorch', 'Transformers', 'spaCy', 'FAISS', 'LangChain'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 text-indigo-700 dark:text-indigo-300 text-sm font-medium rounded-full border border-indigo-200 dark:border-indigo-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -292,7 +309,7 @@ const MeetAI = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Backend & Infrastructure</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Python', 'FastAPI', 'Celery', 'Redis', 'PostgreSQL', 'Docker'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-full border border-blue-200 dark:border-blue-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -302,7 +319,7 @@ const MeetAI = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Frontend</h4>
                 <div className="flex flex-wrap gap-2">
                   {['React', 'TypeScript', 'Tailwind CSS', 'WebSocket', 'Axios'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-pink-100 to-orange-100 dark:from-pink-900/30 dark:to-orange-900/30 text-pink-700 dark:text-pink-300 text-sm font-medium rounded-full border border-pink-200 dark:border-pink-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -312,7 +329,7 @@ const MeetAI = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Cloud & DevOps</h4>
                 <div className="flex flex-wrap gap-2">
                   {['AWS', 'S3', 'EC2', 'Lambda', 'CloudWatch', 'CI/CD'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-full border border-green-200 dark:border-green-800">
+                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
                       {tech}
                     </span>
                   ))}
@@ -324,7 +341,7 @@ const MeetAI = () => {
           {/* Key Features */}
           <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-yellow-600 to-orange-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Key Features
             </h2>
             <div className="space-y-4 mb-8">
@@ -371,7 +388,7 @@ const MeetAI = () => {
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex gap-4 items-start bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feature.icon} />
                     </svg>
@@ -388,57 +405,57 @@ const MeetAI = () => {
           {/* Technical Challenges */}
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-red-600 to-pink-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Technical Challenges & Solutions
             </h2>
 
             <div className="space-y-6 mb-8">
-              <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/10 dark:to-pink-900/10 rounded-xl p-6 border-l-4 border-red-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Audio Synchronization</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   When multiple participants record audio independently, the files are rarely synchronized, making it
                   difficult to create a coherent timeline of the meeting.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented audio alignment
+                  <strong className="text-[#609966]">Solution:</strong> Implemented audio alignment
                   algorithms using cross-correlation techniques to detect overlapping speech patterns and automatically
                   synchronize timelines with sub-second accuracy.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900/10 dark:to-yellow-900/10 rounded-xl p-6 border-l-4 border-orange-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Real-time Processing</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Processing hours of audio through multiple AI models (ASR, diarization, NLP) is computationally
                   intensive and time-consuming.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Designed a distributed
+                  <strong className="text-[#609966]">Solution:</strong> Designed a distributed
                   processing pipeline using Celery workers and Redis queues, enabling parallel processing of audio
                   segments. Optimized model inference with quantization and batching, reducing processing time by 60%.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-xl p-6 border-l-4 border-blue-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Speaker Differentiation</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Distinguishing between speakers with similar voice characteristics or in noisy environments proved
                   challenging with standard diarization models.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Developed a hybrid approach
+                  <strong className="text-[#609966]">Solution:</strong> Developed a hybrid approach
                   combining speaker embeddings with contextual NLP analysis. The system uses conversational patterns
                   (turn-taking, topic continuity) to improve speaker attribution accuracy by 25%.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/10 dark:to-pink-900/10 rounded-xl p-6 border-l-4 border-purple-600">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Chatbot Hallucination</h4>
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   Large language models can generate plausible-sounding but incorrect answers when queried about meeting content.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-indigo-600 dark:text-indigo-400">Solution:</strong> Implemented RAG (Retrieval-Augmented
+                  <strong className="text-[#609966]">Solution:</strong> Implemented RAG (Retrieval-Augmented
                   Generation) architecture with strict grounding. The chatbot only answers based on retrieved transcript segments
                   and always cites timestamps, drastically reducing hallucinations while maintaining conversational quality.
                 </p>
@@ -449,26 +466,26 @@ const MeetAI = () => {
           {/* Impact & Results */}
           <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-emerald-600 to-teal-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Impact & Results
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
-                <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">75%</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">75%</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">Time Saved</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   on meeting note-taking and summarization
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800 text-center">
-                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">95%</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">95%</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">Transcription Accuracy</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   with speaker identification
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-8 border border-purple-200 dark:border-purple-800 text-center">
-                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">10x</div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
+                <div className="text-4xl font-bold text-[#609966] mb-2">10x</div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium">Faster Information Retrieval</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                   compared to manual review
@@ -490,36 +507,36 @@ const MeetAI = () => {
           {/* Future Enhancements */}
           <div className={`transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-cyan-600 to-blue-600 rounded-full"></span>
+              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
               Future Enhancements
             </h2>
             <ul className="space-y-4 text-gray-700 dark:text-gray-300 mb-8">
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Real-time Transcription:</strong> Process audio streams in real-time during live meetings for instant transcription and insights.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Multi-language Support:</strong> Expand ASR and NLP capabilities to support meetings in multiple languages with automatic translation.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-pink-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Sentiment Analysis:</strong> Analyze emotional tone and engagement levels throughout meetings to provide deeper insights into team dynamics.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Integration Hub:</strong> Connect with popular tools like Slack, Microsoft Teams, Jira, and Notion for seamless workflow integration.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
                 <span><strong className="text-gray-900 dark:text-white">Analytics Dashboard:</strong> Provide meeting analytics including participation metrics, speaking time distribution, and trend analysis over time.</span>
@@ -529,7 +546,7 @@ const MeetAI = () => {
 
           {/* Conclusion */}
           <div className={`transition-all duration-1000 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-3xl font-bold mb-4">Transforming Meetings into Knowledge</h2>
               <p className="text-lg leading-relaxed mb-6 text-white/90">
                 Meet AI represents a significant step forward in making physical meeting content as accessible and
@@ -557,7 +574,7 @@ const MeetAI = () => {
           </button>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             Back to Top
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

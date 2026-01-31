@@ -7,4 +7,21 @@ export default defineConfig({
   server: {
     historyApiFallback: true,
   },
+  build: {
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
+    // Inline small assets for fewer requests
+    assetsInlineLimit: 4096,
+    // CSS code splitting
+    cssCodeSplit: true,
+    // Optimize chunk splitting
+    rollupOptions: {
+      output: {
+        // Optimize asset file names for caching
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'chunks/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+      },
+    },
+  },
 })

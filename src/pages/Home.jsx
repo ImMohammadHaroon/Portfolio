@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Hero from '../components/Hero';
-import Skills from '../components/Skills';
-import ExperienceTimeline from '../components/ExperienceTimeline';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import SEOHead from '../components/SEOHead';
 import aboutImage from '../assets/about.jpg';
+
+// Lazy load heavy components to improve initial page load speed
+const Skills = lazy(() => import('../components/Skills'));
+const ExperienceTimeline = lazy(() => import('../components/ExperienceTimeline'));
+const Projects = lazy(() => import('../components/Projects'));
+const Contact = lazy(() => import('../components/Contact'));
+const Footer = lazy(() => import('../components/Footer'));
+
+import SectionLoader from '../components/SectionLoader';
 
 const Home = () => {
   return (
     <div>
       <SEOHead
-        title="DevOwl Portfolio - Mohammad Haroon | Full Stack Web Developer"
-        description="DevOwl - Official portfolio of Mohammad Haroon, a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
-        keywords="DevOwl, devowl portfolio, Mohammad Haroon, Muhammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
+        title="Haroon's Portfolio - Mohammad Haroon | Full Stack Web Developer"
+        description="Official portfolio of Mohammad Haroon, a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
+        keywords="Haroon's Portfolio, Mohammad Haroon, Muhammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
         ogImage="https://devowl.me/og-image.jpg"
       />
@@ -35,8 +39,12 @@ const Home = () => {
               <div className="relative">
                 <img
                   src={aboutImage}
-                  alt="Mohammad Haroon - DevOwl - Full Stack Web Developer from Bahawalpur, Pakistan"
+                  alt="Mohammad Haroon - Full Stack Web Developer from Bahawalpur, Pakistan"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -44,18 +52,16 @@ const Home = () => {
             {/* Right - Content */}
             <div className="space-y-8 order-1 lg:order-2">
               {/* Introduction */}
-              <div className="space-y-5">
-                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                  I'm <span className="font-bold text-indigo-600 dark:text-indigo-400">Mohammad Haroon</span>, also known as <span className="font-bold text-purple-600 dark:text-purple-400">DevOwl</span>, a passionate Full Stack Web Developer based in Bahawalpur, Pakistan.
-                  With expertise in React.js, WordPress, and modern web technologies, I create responsive,
-                  interactive web experiences that solve real-world problems.
-                </p>
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                I'm <span className="font-bold text-indigo-600 dark:text-indigo-400">Mohammad Haroon</span>, a passionate Full Stack Web Developer based in Bahawalpur, Pakistan.
+                With expertise in React.js, WordPress, and modern web technologies, I create responsive,
+                interactive web experiences that solve real-world problems.
+              </p>
 
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  I completed my Bachelor of Computer Science from Cholistan University of Veterinary &
-                  Animal Sciences (CUVAS), Bahawalpur, combining academic knowledge with practical development skills to deliver exceptional web solutions. As a <strong>DevOwl</strong> developer, I specialize in building cutting-edge e-commerce platforms, dynamic web applications, and SEO-optimized websites that drive results.
-                </p>
-              </div>
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                I completed my Bachelor of Computer Science from Cholistan University of Veterinary &
+                Animal Sciences (CUVAS), Bahawalpur, combining academic knowledge with practical development skills to deliver exceptional web solutions. I specialize in building cutting-edge e-commerce platforms, dynamic web applications, and SEO-optimized websites that drive results.
+              </p>
 
               {/* Key Achievements */}
               <div className="space-y-6 pt-4">
@@ -141,19 +147,29 @@ const Home = () => {
       </section>
 
       {/* Skills Section */}
-      <Skills />
+      <Suspense fallback={<SectionLoader />}>
+        <Skills />
+      </Suspense>
 
       {/* Experience Section */}
-      <ExperienceTimeline />
+      <Suspense fallback={<SectionLoader />}>
+        <ExperienceTimeline />
+      </Suspense>
 
       {/* Projects Section */}
-      <Projects />
+      <Suspense fallback={<SectionLoader />}>
+        <Projects />
+      </Suspense>
 
       {/* Contact Section */}
-      <Contact />
+      <Suspense fallback={<SectionLoader />}>
+        <Contact />
+      </Suspense>
 
       {/* Footer */}
-      <Footer />
+      <Suspense fallback={<div className="h-20 bg-gray-900"></div>}>
+        <Footer />
+      </Suspense>
 
       {/* Scroll to Top Button */}
       <ScrollToTop />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import MeetAIImage from '../assets/Meet-ai.png';
 import SyeenImage from '../assets/Syeen.png';
 import EcommerceImage from '../assets/EcommerceProject.png';
@@ -9,6 +9,7 @@ import ApertureImage from '../assets/bluelines-lifeline-rag.jpg';
 
 const Projects = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [activeFilter, setActiveFilter] = useState('All');
   const projectsRef = useRef(null);
@@ -99,8 +100,8 @@ const Projects = () => {
 
   const categories = ['All', 'AI & Machine Learning', 'Web Development', 'Full-Stack Development'];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -121,11 +122,10 @@ const Projects = () => {
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === category
-                    ? 'bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white shadow-lg scale-105'
-                    : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md hover:scale-105'
-                }`}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeFilter === category
+                  ? 'bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white shadow-lg scale-105'
+                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md hover:scale-105'
+                  }`}
               >
                 {category}
               </button>
@@ -138,9 +138,9 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+              onClick={() => navigate(project.link)}
+              className={`group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Image Container */}
@@ -148,6 +148,8 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
 
@@ -164,7 +166,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 group-hover:text-[#609966] dark:group-hover:text-[#9DC08B] transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
@@ -229,18 +231,19 @@ const Projects = () => {
           </div>
         )}
 
-        {/* View All Projects CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            <span>Let's Build Something Together</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-        </div>
+        {location.pathname !== '/projects' && (
+          <div className="text-center mt-16">
+            <button
+              onClick={() => navigate('/projects')}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              <span>View All Projects</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
