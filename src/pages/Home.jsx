@@ -45,6 +45,7 @@ const Home = () => {
                   width="600"
                   height="800"
                   decoding="async"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>

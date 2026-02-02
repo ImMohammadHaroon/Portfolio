@@ -150,6 +150,9 @@ const Projects = () => {
                   alt={project.title}
                   loading="lazy"
                   decoding="async"
+                  width="400"
+                  height="256"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
 
