@@ -43,8 +43,7 @@ const Projects = () => {
       image: MeetAIImage,
       category: 'AI & Machine Learning',
       technologies: ['Python', 'React', 'Whisper AI', 'NLP', 'FastAPI', 'PostgreSQL'],
-      link: '/project/meet-ai',
-      gradient: 'from-indigo-600 to-purple-600'
+      link: '/project/meet-ai'
     },
     {
       id: 2,
@@ -53,8 +52,7 @@ const Projects = () => {
       image: SyeenImage,
       category: 'Web Development',
       technologies: ['WordPress', 'PHP', 'Elementor', 'MySQL', 'JavaScript', 'AJAX'],
-      link: '/project/syeen',
-      gradient: 'from-yellow-600 to-orange-600'
+      link: '/project/syeen'
     },
     {
       id: 3,
@@ -63,8 +61,7 @@ const Projects = () => {
       image: EcommerceImage,
       category: 'Full-Stack Development',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Payment APIs', 'JWT'],
-      link: '/project/ecommerce',
-      gradient: 'from-purple-600 to-pink-600'
+      link: '/project/ecommerce'
     },
     {
       id: 4,
@@ -73,8 +70,7 @@ const Projects = () => {
       image: FoncentraImage,
       category: 'Web Development',
       technologies: ['WordPress', 'GSAP', 'JavaScript', 'CSS3', 'PHP', 'Custom Theme'],
-      link: '/project/foncentra',
-      gradient: 'from-teal-600 to-green-600'
+      link: '/project/foncentra'
     },
     {
       id: 5,
@@ -83,8 +79,7 @@ const Projects = () => {
       image: EmpireImage,
       category: 'Web Development',
       technologies: ['WordPress', 'PHP', 'WooCommerce', 'MemberPress', 'Payment Integration', 'Custom Theme'],
-      link: '/project/empire-tax-solutions',
-      gradient: 'from-purple-600 to-indigo-600'
+      link: '/project/empire-tax-solutions'
     },
     {
       id: 6,
@@ -93,8 +88,7 @@ const Projects = () => {
       image: ApertureImage,
       category: 'AI & Machine Learning',
       technologies: ['React', 'Python', 'Flask', 'RAG', 'LangChain', 'OpenAI', 'Vector DB'],
-      link: '/project/aperture-futures',
-      gradient: 'from-emerald-600 to-teal-600'
+      link: '/project/aperture-futures'
     }
   ];
 
@@ -105,14 +99,14 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section ref={projectsRef} id="work" className="min-h-screen bg-gray-50 dark:bg-gray-800 py-20">
+    <section ref={projectsRef} id="work" className="min-h-screen bg-bg-subtle dark:bg-darksubtle py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-ink-primary dark:text-darkink-primary mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-ink-muted dark:text-darkink-muted max-w-2xl mx-auto mb-8">
             Explore my recent work showcasing web development expertise and creative solutions
           </p>
 
@@ -123,8 +117,8 @@ const Projects = () => {
                 key={category}
                 onClick={() => setActiveFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeFilter === category
-                  ? 'bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white shadow-lg scale-105'
-                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md hover:scale-105'
+                  ? 'bg-primary-500 text-ink-inverse scale-105'
+                  : 'bg-bg-surface dark:bg-darksurface text-ink-secondary dark:text-darkink-secondary border border-border dark:border-darkborder hover:border-primary-500 hover:scale-105'
                   }`}
               >
                 {category}
@@ -139,7 +133,7 @@ const Projects = () => {
             <div
               key={project.id}
               onClick={() => navigate(project.link)}
-              className={`group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              className={`group relative bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -158,7 +152,7 @@ const Projects = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4 z-10">
-                  <span className="px-3 py-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-xs font-semibold text-gray-800 dark:text-white rounded-full shadow-lg">
+                  <span className="px-3 py-1 bg-bg-surface/90 dark:bg-darksurface/90 backdrop-blur-sm text-xs font-semibold text-ink-primary dark:text-darkink-primary rounded-full border border-border dark:border-darkborder">
                     {project.category}
                   </span>
                 </div>
@@ -166,11 +160,11 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 group-hover:text-[#609966] dark:group-hover:text-[#9DC08B] transition-colors">
+                <h3 className="text-xl font-bold text-ink-primary dark:text-darkink-primary mb-3 line-clamp-2 group-hover:text-primary-500 transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
+                <p className="text-ink-muted dark:text-darkink-muted text-sm mb-4 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -179,7 +173,7 @@ const Projects = () => {
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-bg-subtle dark:bg-darksubtle text-ink-secondary dark:text-darkink-secondary text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>
@@ -189,7 +183,7 @@ const Projects = () => {
                 {/* View Project Button */}
                 <button
                   onClick={() => navigate(project.link)}
-                  className="inline-flex items-center gap-2 text-[#609966] dark:text-[#9DC08B] font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
+                  className="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
                 >
                   <span>View Project</span>
                   <svg
@@ -209,7 +203,7 @@ const Projects = () => {
               </div>
 
               {/* Bottom Accent Line */}
-              <div className={`h-1 bg-gradient-to-r ${project.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+              <div className="h-1 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
         </div>
@@ -218,7 +212,7 @@ const Projects = () => {
         {filteredProjects.length === 0 && (
           <div className="text-center py-20">
             <svg
-              className="w-24 h-24 text-gray-400 dark:text-gray-600 mx-auto mb-4"
+              className="w-24 h-24 text-ink-muted dark:text-darkink-muted mx-auto mb-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -230,7 +224,7 @@ const Projects = () => {
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <p className="text-gray-500 dark:text-gray-400 text-lg">No projects found in this category</p>
+            <p className="text-ink-muted dark:text-darkink-muted text-lg">No projects found in this category</p>
           </div>
         )}
 
@@ -238,7 +232,7 @@ const Projects = () => {
           <div className="text-center mt-16">
             <button
               onClick={() => navigate('/projects')}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-ink-inverse font-semibold rounded-lg transition-colors duration-300"
             >
               <span>View All Projects</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

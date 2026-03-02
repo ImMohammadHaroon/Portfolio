@@ -42,7 +42,7 @@ function App() {
       <SpeedInsights />
       <Analytics />
       <CustomCursor />
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="min-h-screen bg-bg-main dark:bg-darkbg transition-colors duration-300">
         <Suspense fallback={<SectionLoader />}>
           <Routes>
             <Route path="/" element={

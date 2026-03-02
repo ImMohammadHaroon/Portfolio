@@ -9,24 +9,47 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#40513B',
-          dark: '#2d3a29',
-          light: '#609966',
+          500: '#556B2F',
+          600: '#465826',
+          700: '#37451E',
+          soft: '#EEF3E6',
         },
-        secondary: {
-          DEFAULT: '#609966',
-          dark: '#40513B',
-          light: '#9DC08B',
+        bg: {
+          main: '#F8FAFC',
+          surface: '#FFFFFF',
+          subtle: '#F1F5F9',
         },
-        accent: {
-          DEFAULT: '#9DC08B',
-          light: '#EDF1D6',
-          dark: '#609966',
+        border: {
+          DEFAULT: '#E2E8F0',
+          strong: '#CBD5E1',
         },
-        success: '#9DC08B',
-        cream: '#EDF1D6',
-        sage: '#9DC08B',
-        forest: '#40513B',
+        ink: {
+          primary: '#0F172A',
+          secondary: '#334155',
+          muted: '#64748B',
+          inverse: '#FFFFFF',
+        },
+        success: {
+          500: '#16A34A',
+          soft: '#ECFDF5',
+        },
+        warning: {
+          500: '#F59E0B',
+          soft: '#FFFBEB',
+        },
+        error: {
+          500: '#DC2626',
+          soft: '#FEF2F2',
+        },
+        darkbg: '#0B1220',
+        darksurface: '#111827',
+        darkborder: '#243041',
+        darksubtle: '#1F2937',
+        darkink: {
+          primary: '#E5E7EB',
+          secondary: '#9CA3AF',
+          muted: '#9CA3AF',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -89,10 +112,7 @@ module.exports = {
       backdropBlur: {
         xs: '2px',
       },
-      boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 30px rgba(59, 130, 246, 0.5)',
-      },
+      boxShadow: {},
     },
   },
   plugins: [],

@@ -11,13 +11,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg-main dark:bg-darkbg"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-primary-soft dark:bg-primary-500/10 rounded-full opacity-35 dark:opacity-15 animate-blob"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-primary-soft dark:bg-primary-500/10 rounded-full opacity-30 dark:opacity-12 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-bg-subtle dark:bg-darksubtle rounded-full opacity-45 dark:opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Hero Content */}
@@ -28,7 +28,7 @@ const Hero = () => {
         >
           {/* Name */}
           <h1
-            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-gray-900 dark:text-white transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-ink-primary dark:text-darkink-primary transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
           >
             Mohammad Haroon
@@ -36,7 +36,7 @@ const Hero = () => {
 
           {/* Title */}
           <h2
-            className={`text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-4 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            className={`text-xl sm:text-2xl md:text-3xl font-semibold text-ink-secondary dark:text-darkink-primary mb-4 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
           >
             Full Stack Web Developer | React.js & WordPress Specialist
@@ -44,7 +44,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <p
-            className={`text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            className={`text-base sm:text-lg md:text-xl text-ink-muted dark:text-darkink-secondary mb-8 max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
           >
             Building responsive, interactive web experiences with modern technologies
@@ -52,11 +52,11 @@ const Hero = () => {
 
           {/* Contact Info */}
           <div
-            className={`flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 text-sm sm:text-base text-gray-700 dark:text-gray-300 transform transition-all duration-1000 delay-450 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            className={`flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 text-sm sm:text-base text-ink-secondary dark:text-darkink-secondary transform transition-all duration-1000 delay-450 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
           >
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -71,10 +71,10 @@ const Hero = () => {
               </a> */}
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <a href="tel:+923428979314" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <a href="tel:+923428979314" className="hover:text-primary-500 transition-colors">
                 +92 342 8979314
               </a>
             </div>
@@ -89,17 +89,16 @@ const Hero = () => {
               to="work"
               smooth={true}
               duration={500}
-              className="group relative px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden"
+              className="group relative px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-ink-inverse font-semibold rounded-lg transition-colors duration-300 cursor-pointer"
             >
               <span className="relative z-10">View My Work</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#9DC08B] to-[#609966] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
 
             <Link
               to="contact"
               smooth={true}
               duration={500}
-              className="group px-8 py-4 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 font-semibold rounded-lg shadow-lg hover:shadow-xl border-2 border-indigo-600 dark:border-indigo-400 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              className="group px-8 py-4 bg-bg-surface dark:bg-darksurface text-ink-primary dark:text-darkink-primary font-semibold rounded-lg border border-border dark:border-darkborder hover:bg-bg-subtle dark:hover:bg-darksubtle transition-colors duration-300 cursor-pointer"
             >
               Get In Touch
             </Link>
@@ -114,11 +113,11 @@ const Hero = () => {
               href="https://github.com/ImMohammadHaroon"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 sm:p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="group relative p-3 sm:p-4 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-full transition-colors duration-300"
               aria-label="GitHub"
             >
               <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-ink-secondary dark:text-darkink-secondary group-hover:text-primary-500 transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -134,11 +133,11 @@ const Hero = () => {
               href="https://www.linkedin.com/in/mohammad-haroon-9b9356362/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 sm:p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="group relative p-3 sm:p-4 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-full transition-colors duration-300"
               aria-label="LinkedIn"
             >
               <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-ink-secondary dark:text-darkink-secondary group-hover:text-primary-500 transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -150,11 +149,11 @@ const Hero = () => {
               href="https://www.instagram.com/mohammad_haro.on"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 sm:p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="group relative p-3 sm:p-4 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-full transition-colors duration-300"
               aria-label="Instagram"
             >
               <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-ink-secondary dark:text-darkink-secondary group-hover:text-primary-500 transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

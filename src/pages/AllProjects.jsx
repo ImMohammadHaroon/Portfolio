@@ -10,7 +10,7 @@ const AllProjects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-bg-main dark:bg-darkbg transition-colors duration-300">
       <SEOHead
         title="All Projects - Mohammad Haroon | Full Stack Developer Portfolio"
         description="Explore the complete portfolio of Mohammad Haroon: AI-powered platforms, e-commerce solutions, WordPress development, and modern web applications built with React, Node.js, and Python."

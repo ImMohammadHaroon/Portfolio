@@ -15,7 +15,7 @@ const EmpireTaxSolutions = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-bg-main dark:bg-darkbg">
       <SEOHead
         title="Empire Tax Solutions - Financial Services Platform | Mohammad Haroon Portfolio"
         description="Empire Tax Solutions: A dual-purpose WordPress platform offering expert tax services and business mentorship programs. Features three-tiered mentorship with revenue-sharing. Developed by Mohammad Haroon."
@@ -54,21 +54,21 @@ const EmpireTaxSolutions = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative bg-white dark:bg-black py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-900 dark:to-black"></div>
+      <div className="relative bg-bg-main dark:bg-darkbg py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-bg-subtle dark:bg-darksubtle"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJWMzRoLTJ6bTAtNGgydi0yaC0ydjJ6bS00IDBoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyem0wLTRoMnYtMmgtMnYyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-[#609966] text-white text-sm font-semibold rounded-full">
+              <span className="px-4 py-2 bg-primary-500 text-white text-sm font-semibold rounded-full">
                 Financial Services & Business Platform
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-ink-primary dark:text-darkink-primary mb-6">
               Empire Tax Solutions: Building Tax Empires
             </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-ink-secondary dark:text-darkink-secondary max-w-3xl mx-auto leading-relaxed">
               A dual-purpose platform empowering individuals with expert tax services while helping aspiring
               entrepreneurs build their own successful tax businesses through structured mentorship programs.
             </p>
@@ -96,17 +96,17 @@ const EmpireTaxSolutions = () => {
         {/* Project Overview */}
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Project Overview
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed mb-6">
               In the complex world of tax preparation, two distinct needs exist: individuals seeking reliable tax services
               to maximize their refunds, and aspiring entrepreneurs looking to break into the lucrative tax industry.
               Empire Tax Solutions was created to address both needs simultaneously, creating a unique ecosystem that benefits
               clients and empowers future tax professionals.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed mb-8">
               Empire Tax Solutions is a sophisticated dual-purpose WordPress platform that serves as both a professional
               tax preparation service for individuals and businesses, and a comprehensive business incubator for aspiring
               tax professionals. The platform offers transparent pricing, expert tax preparation with refund maximization
@@ -118,30 +118,30 @@ const EmpireTaxSolutions = () => {
 
           {/* The Challenge */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               The Challenge
             </h2>
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 mb-8 border border-gray-200 dark:border-gray-700">
-              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
+            <div className="bg-bg-subtle dark:bg-darksubtle rounded-xl p-8 mb-8 border border-border dark:border-darkborder">
+              <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed mb-4">
                 Creating a platform that effectively serves two distinct audiences with different needs requires careful planning:
               </p>
-              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+              <ul className="space-y-4 text-ink-secondary dark:text-darkink-secondary">
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
-                  <span><strong className="text-gray-900 dark:text-white">Dual Audience Segmentation:</strong> Designing user experiences that cater to both tax clients seeking services and entrepreneurs seeking business opportunities without confusing or overwhelming either group.</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">1</span>
+                  <span><strong className="text-ink-primary dark:text-darkink-primary">Dual Audience Segmentation:</strong> Designing user experiences that cater to both tax clients seeking services and entrepreneurs seeking business opportunities without confusing or overwhelming either group.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
-                  <span><strong className="text-gray-900 dark:text-white">Trust & Credibility:</strong> Building confidence with financial services requires establishing professional authority while remaining approachable, especially when handling sensitive tax information.</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">2</span>
+                  <span><strong className="text-ink-primary dark:text-darkink-primary">Trust & Credibility:</strong> Building confidence with financial services requires establishing professional authority while remaining approachable, especially when handling sensitive tax information.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
-                  <span><strong className="text-gray-900 dark:text-white">Complex Tiered Offerings:</strong> Presenting three distinct mentorship levels (Silver, Gold, Platinum) with varying features, pricing, and benefits in a clear, comparative manner.</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">3</span>
+                  <span><strong className="text-ink-primary dark:text-darkink-primary">Complex Tiered Offerings:</strong> Presenting three distinct mentorship levels (Silver, Gold, Platinum) with varying features, pricing, and benefits in a clear, comparative manner.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-[#609966] text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
-                  <span><strong className="text-gray-900 dark:text-white">Revenue-Sharing Management:</strong> Implementing systems to track, calculate, and communicate revenue-sharing arrangements for mentorship participants accurately and transparently.</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-semibold mt-1">4</span>
+                  <span><strong className="text-ink-primary dark:text-darkink-primary">Revenue-Sharing Management:</strong> Implementing systems to track, calculate, and communicate revenue-sharing arrangements for mentorship participants accurately and transparently.</span>
                 </li>
               </ul>
             </div>
@@ -149,30 +149,30 @@ const EmpireTaxSolutions = () => {
 
           {/* Technical Solution */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Technical Solution
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed mb-6">
               Empire Tax Solutions leverages WordPress's flexibility combined with custom development to create a
               professional, dual-purpose platform that serves both audiences seamlessly:
             </p>
 
             {/* Custom WordPress Architecture */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-2xl font-semibold text-ink-primary dark:text-darkink-primary mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
                 Custom WordPress Theme Architecture
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-ink-secondary dark:text-darkink-secondary leading-relaxed mb-4">
                 Built on WordPress with a completely custom theme designed from scratch to balance professional authority
                 with accessibility. The architecture separates concerns into distinct sections while maintaining a cohesive
                 brand identity throughout both service offerings.
               </p>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                <p className="text-gray-600 dark:text-gray-400 italic">
+              <div className="bg-bg-surface dark:bg-darksurface rounded-lg p-6 border border-border dark:border-darkborder">
+                <p className="text-ink-muted dark:text-darkink-muted italic">
                   "The custom theme architecture allows for flexible content management while maintaining strict design
                   consistency—critical for establishing trust in the financial services sector."
                 </p>
@@ -181,26 +181,26 @@ const EmpireTaxSolutions = () => {
 
             {/* Dual-Purpose Navigation */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-2xl font-semibold text-ink-primary dark:text-darkink-primary mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
                 Intelligent User Journey Segmentation
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-ink-secondary dark:text-darkink-secondary leading-relaxed mb-4">
                 The platform implements smart navigation that guides users down the appropriate path based on their intent:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-900/20 dark:to-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">For Tax Clients</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                <div className="bg-bg-subtle dark:bg-darksubtle rounded-lg p-6 border border-border dark:border-darkborder">
+                  <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-2">For Tax Clients</h4>
+                  <p className="text-ink-secondary dark:text-darkink-secondary text-sm">
                     Streamlined service pages, transparent pricing calculator, client portal for document uploads,
                     and appointment booking system.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">For Entrepreneurs</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                <div className="bg-success-soft dark:bg-darksubtle rounded-lg p-6 border border-border dark:border-darkborder">
+                  <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-2">For Entrepreneurs</h4>
+                  <p className="text-ink-secondary dark:text-darkink-secondary text-sm">
                     Detailed mentorship program comparisons, success stories, training curriculum overview, and
                     application/enrollment process.
                   </p>
@@ -210,40 +210,40 @@ const EmpireTaxSolutions = () => {
 
             {/* Tiered Membership System */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-2xl font-semibold text-ink-primary dark:text-darkink-primary mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
                 Three-Tiered Mentorship Programs
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-ink-secondary dark:text-darkink-secondary leading-relaxed mb-4">
                 The platform showcases three distinct mentorship levels with clear feature comparisons and benefits:
               </p>
               <div className="space-y-4">
-                <div className="bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-lg p-5 border-l-4 border-gray-500">
+                <div className="bg-bg-subtle dark:bg-darksubtle rounded-lg p-5 border-l-4 border-primary-500">
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Silver Tier</h4>
-                    <span className="px-3 py-1 bg-gray-500 text-white text-xs font-bold rounded-full">Entry Level</span>
+                    <h4 className="text-lg font-semibold text-ink-primary dark:text-darkink-primary">Silver Tier</h4>
+                    <span className="px-3 py-1 bg-primary-500 text-white text-xs font-bold rounded-full">Entry Level</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  <p className="text-ink-secondary dark:text-darkink-secondary text-sm">
                     Basic training, software access, and foundational business setup guidance for new entrepreneurs.
                   </p>
                 </div>
-                <div className="bg-gradient-to-r from-green-50 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-lg p-5 border-l-4 border-[#609966]">
+                <div className="bg-success-soft dark:bg-darksubtle rounded-lg p-5 border-l-4 border-primary-500">
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Gold Tier</h4>
-                    <span className="px-3 py-1 bg-[#609966] text-white text-xs font-bold rounded-full">Advanced</span>
+                    <h4 className="text-lg font-semibold text-ink-primary dark:text-darkink-primary">Gold Tier</h4>
+                    <span className="px-3 py-1 bg-primary-500 text-white text-xs font-bold rounded-full">Advanced</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  <p className="text-ink-secondary dark:text-darkink-secondary text-sm">
                     Enhanced training, premium software, marketing support, and revenue-sharing opportunities.
                   </p>
                 </div>
-                <div className="bg-gradient-to-r from-[#609966] to-[#9DC08B] dark:from-green-800 dark:to-emerald-800 rounded-lg p-5 border-l-4 border-green-400">
+                <div className="bg-primary-500 rounded-lg p-5 border-l-4 border-green-400">
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-lg font-semibold text-white">Platinum Tier</h4>
-                    <span className="px-3 py-1 bg-white text-[#609966] text-xs font-bold rounded-full">Elite</span>
+                    <span className="px-3 py-1 bg-white text-primary-500 text-xs font-bold rounded-full">Elite</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  <p className="text-ink-secondary dark:text-darkink-secondary text-sm">
                     VIP training, full software suite, dedicated mentorship, priority support, and maximized revenue sharing.
                   </p>
                 </div>
@@ -252,34 +252,34 @@ const EmpireTaxSolutions = () => {
 
             {/* Client Portal */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-2xl font-semibold text-ink-primary dark:text-darkink-primary mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 Secure Client Portal System
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-ink-secondary dark:text-darkink-secondary leading-relaxed mb-4">
                 A secure, user-friendly portal for tax clients to manage their tax preparation process:
               </p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300 ml-6">
+              <ul className="space-y-2 text-ink-secondary dark:text-darkink-secondary ml-6">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#609966] mt-1.5">▸</span>
+                  <span className="text-primary-500 mt-1.5">▸</span>
                   <span>Encrypted document upload system for tax forms and supporting documents</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#609966] mt-1.5">▸</span>
+                  <span className="text-primary-500 mt-1.5">▸</span>
                   <span>Real-time status tracking of tax return preparation progress</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#609966] mt-1.5">▸</span>
+                  <span className="text-primary-500 mt-1.5">▸</span>
                   <span>Direct messaging with assigned tax professional</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#609966] mt-1.5">▸</span>
+                  <span className="text-primary-500 mt-1.5">▸</span>
                   <span>E-signature capabilities for required authorizations</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#609966] mt-1.5">▸</span>
+                  <span className="text-primary-500 mt-1.5">▸</span>
                   <span>Access to previous years' returns and tax documents</span>
                 </li>
               </ul>
@@ -287,34 +287,34 @@ const EmpireTaxSolutions = () => {
 
             {/* Revenue Sharing */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#609966]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-2xl font-semibold text-ink-primary dark:text-darkink-primary mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Revenue-Sharing Dashboard
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-ink-secondary dark:text-darkink-secondary leading-relaxed mb-4">
                 Custom-built dashboard for mentorship participants to track their earnings and business growth:
               </p>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-[#609966] mb-4">
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong className="text-gray-900 dark:text-white">Dashboard Features:</strong>
+              <div className="bg-bg-surface dark:bg-darksurface rounded-lg p-6 border-l-4 border-primary-500 mb-4">
+                <p className="text-ink-secondary dark:text-darkink-secondary mb-4">
+                  <strong className="text-ink-primary dark:text-darkink-primary">Dashboard Features:</strong>
                 </p>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 text-ink-muted dark:text-darkink-muted">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-primary-500 font-mono text-sm mt-0.5">✓</span>
                     <span>Real-time revenue tracking with transparent calculation breakdowns</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-primary-500 font-mono text-sm mt-0.5">✓</span>
                     <span>Client acquisition metrics and conversion analytics</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-primary-500 font-mono text-sm mt-0.5">✓</span>
                     <span>Performance comparisons across mentorship tiers</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#609966] font-mono text-sm mt-0.5">✓</span>
+                    <span className="text-primary-500 font-mono text-sm mt-0.5">✓</span>
                     <span>Automated payout scheduling and payment history</span>
                   </li>
                 </ul>
@@ -324,46 +324,46 @@ const EmpireTaxSolutions = () => {
 
           {/* Technical Stack */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Technology Stack
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Core Platform</h4>
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-6 border border-border dark:border-darkborder shadow-sm">
+                <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-4 text-lg">Core Platform</h4>
                 <div className="flex flex-wrap gap-2">
                   {['WordPress', 'PHP', 'MySQL', 'Custom Theme', 'WooCommerce'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
+                    <span key={tech} className="px-3 py-1.5 bg-bg-subtle dark:bg-darksubtle text-ink-secondary dark:text-darkink-secondary text-sm font-medium rounded-full border border-border dark:border-darkborder">
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Frontend</h4>
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-6 border border-border dark:border-darkborder shadow-sm">
+                <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-4 text-lg">Frontend</h4>
                 <div className="flex flex-wrap gap-2">
                   {['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Bootstrap', 'AJAX'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
+                    <span key={tech} className="px-3 py-1.5 bg-bg-subtle dark:bg-darksubtle text-ink-secondary dark:text-darkink-secondary text-sm font-medium rounded-full border border-border dark:border-darkborder">
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Plugins & Extensions</h4>
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-6 border border-border dark:border-darkborder shadow-sm">
+                <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-4 text-lg">Plugins & Extensions</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Advanced Custom Fields', 'Gravity Forms', 'MemberPress', 'WP Mail SMTP'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
+                    <span key={tech} className="px-3 py-1.5 bg-bg-subtle dark:bg-darksubtle text-ink-secondary dark:text-darkink-secondary text-sm font-medium rounded-full border border-border dark:border-darkborder">
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">Security & Infrastructure</h4>
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-6 border border-border dark:border-darkborder shadow-sm">
+                <h4 className="font-semibold text-ink-primary dark:text-darkink-primary mb-4 text-lg">Security & Infrastructure</h4>
                 <div className="flex flex-wrap gap-2">
                   {['SSL/TLS', 'Cloudflare', 'Wordfence', 'Backup System', 'CDN'].map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-200 dark:border-gray-600">
+                    <span key={tech} className="px-3 py-1.5 bg-bg-subtle dark:bg-darksubtle text-ink-secondary dark:text-darkink-secondary text-sm font-medium rounded-full border border-border dark:border-darkborder">
                       {tech}
                     </span>
                   ))}
@@ -374,8 +374,8 @@ const EmpireTaxSolutions = () => {
 
           {/* Key Features */}
           <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Key Features
             </h2>
             <div className="space-y-4 mb-8">
@@ -421,15 +421,15 @@ const EmpireTaxSolutions = () => {
                   icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
                 }
               ].map((feature, index) => (
-                <div key={index} className="flex gap-4 items-start bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-lg flex items-center justify-center">
+                <div key={index} className="flex gap-4 items-start bg-bg-surface dark:bg-darksurface rounded-xl p-6 border border-border dark:border-darkborder hover:shadow-lg transition-shadow">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feature.icon} />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+                    <h4 className="text-lg font-semibold text-ink-primary dark:text-darkink-primary mb-2">{feature.title}</h4>
+                    <p className="text-ink-muted dark:text-darkink-muted">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -438,20 +438,20 @@ const EmpireTaxSolutions = () => {
 
           {/* Technical Challenges */}
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Technical Challenges & Solutions
             </h2>
 
             <div className="space-y-6 mb-8">
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Balancing Dual Purposes Without Confusion</h4>
-                <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <div className="bg-bg-subtle dark:bg-darksubtle rounded-xl p-6 border-l-4 border-primary-500">
+                <h4 className="text-xl font-semibold text-ink-primary dark:text-darkink-primary mb-3">Challenge: Balancing Dual Purposes Without Confusion</h4>
+                <p className="text-ink-secondary dark:text-darkink-secondary mb-3">
                   The platform needed to serve two distinct audiences with different goals without creating a confusing
                   or cluttered user experience that could deter either group.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-[#609966]">Solution:</strong> Implemented intelligent
+                <p className="text-ink-muted dark:text-darkink-muted">
+                  <strong className="text-primary-500">Solution:</strong> Implemented intelligent
                   navigation with clear CTAs that segment users early in their journey. Created separate landing pages
                   optimized for each audience with distinct value propositions. Used conditional menus that show relevant
                   options based on user type, and designed clear visual distinction between service and mentorship sections
@@ -459,28 +459,28 @@ const EmpireTaxSolutions = () => {
                 </p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Data Security for Financial Information</h4>
-                <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <div className="bg-bg-subtle dark:bg-darksubtle rounded-xl p-6 border-l-4 border-primary-500">
+                <h4 className="text-xl font-semibold text-ink-primary dark:text-darkink-primary mb-3">Challenge: Data Security for Financial Information</h4>
+                <p className="text-ink-secondary dark:text-darkink-secondary mb-3">
                   Handling sensitive tax documents and personal financial information required implementing robust security
                   measures to protect client data and maintain compliance with data protection regulations.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-[#609966]">Solution:</strong> Implemented end-to-end
+                <p className="text-ink-muted dark:text-darkink-muted">
+                  <strong className="text-primary-500">Solution:</strong> Implemented end-to-end
                   encryption for all document uploads and storage. Added two-factor authentication for portal access,
                   regular security audits with Wordfence, and automated backup systems. Created secure, time-limited
                   access tokens for document viewing and integrated SSL certificates throughout the entire platform.
                 </p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Complex Revenue-Sharing Calculations</h4>
-                <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <div className="bg-bg-subtle dark:bg-darksubtle rounded-xl p-6 border-l-4 border-primary-500">
+                <h4 className="text-xl font-semibold text-ink-primary dark:text-darkink-primary mb-3">Challenge: Complex Revenue-Sharing Calculations</h4>
+                <p className="text-ink-secondary dark:text-darkink-secondary mb-3">
                   Accurately tracking and calculating revenue shares across three mentorship tiers with varying percentages,
                   bonus structures, and performance metrics required sophisticated automation.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-[#609966]">Solution:</strong> Developed custom WordPress
+                <p className="text-ink-muted dark:text-darkink-muted">
+                  <strong className="text-primary-500">Solution:</strong> Developed custom WordPress
                   plugins with automated calculation engines that track all transactions, apply tier-specific formulas,
                   and generate detailed reports. Built a transparent dashboard showing real-time earnings with full
                   calculation breakdowns. Implemented automated email notifications for milestones and payouts, with
@@ -488,14 +488,14 @@ const EmpireTaxSolutions = () => {
                 </p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border-l-4 border-[#609966]">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Challenge: Establishing Trust and Credibility</h4>
-                <p className="text-gray-700 dark:text-gray-300 mb-3">
+              <div className="bg-bg-subtle dark:bg-darksubtle rounded-xl p-6 border-l-4 border-primary-500">
+                <h4 className="text-xl font-semibold text-ink-primary dark:text-darkink-primary mb-3">Challenge: Establishing Trust and Credibility</h4>
+                <p className="text-ink-secondary dark:text-darkink-secondary mb-3">
                   As a financial services platform, establishing immediate trust and professional credibility was critical,
                   especially for the mentorship program which required significant investment from participants.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  <strong className="text-[#609966]">Solution:</strong> Implemented a comprehensive
+                <p className="text-ink-muted dark:text-darkink-muted">
+                  <strong className="text-primary-500">Solution:</strong> Implemented a comprehensive
                   trust-building strategy including prominent display of certifications and credentials, detailed founder
                   biography with professional background, video testimonials from successful mentorship participants,
                   transparent pricing with no hidden fees, money-back guarantee policies, and third-party trust badges.
@@ -507,41 +507,41 @@ const EmpireTaxSolutions = () => {
 
           {/* Impact & Results */}
           <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Impact & Results
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
-                <div className="text-4xl font-bold text-[#609966] mb-2">150+</div>
-                <div className="text-gray-700 dark:text-gray-300 font-medium">Active Mentees</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-8 border border-border dark:border-darkborder text-center">
+                <div className="text-4xl font-bold text-primary-500 mb-2">150+</div>
+                <div className="text-ink-secondary dark:text-darkink-secondary font-medium">Active Mentees</div>
+                <div className="text-sm text-ink-muted dark:text-darkink-muted mt-2">
                   across all mentorship tiers
                 </div>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
-                <div className="text-4xl font-bold text-[#609966] mb-2">3,200+</div>
-                <div className="text-gray-700 dark:text-gray-300 font-medium">Tax Returns Filed</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-8 border border-border dark:border-darkborder text-center">
+                <div className="text-4xl font-bold text-primary-500 mb-2">3,200+</div>
+                <div className="text-ink-secondary dark:text-darkink-secondary font-medium">Tax Returns Filed</div>
+                <div className="text-sm text-ink-muted dark:text-darkink-muted mt-2">
                   annually through the platform
                 </div>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-green-200 dark:border-green-800 text-center">
-                <div className="text-4xl font-bold text-[#609966] mb-2">94%</div>
-                <div className="text-gray-700 dark:text-gray-300 font-medium">Client Satisfaction</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              <div className="bg-bg-surface dark:bg-darksurface rounded-xl p-8 border border-border dark:border-darkborder text-center">
+                <div className="text-4xl font-bold text-primary-500 mb-2">94%</div>
+                <div className="text-ink-secondary dark:text-darkink-secondary font-medium">Client Satisfaction</div>
+                <div className="text-sm text-ink-muted dark:text-darkink-muted mt-2">
                   rated excellent or outstanding
                 </div>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed mb-6">
               Empire Tax Solutions has successfully created a thriving ecosystem that benefits both tax clients and
               aspiring entrepreneurs. The platform has helped launch over 150 independent tax businesses through its
               mentorship programs, with many participants achieving full-time income within their first tax season.
               The structured training and ongoing support have resulted in a 94% satisfaction rate among both clients
               and mentorship participants.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            <p className="text-ink-secondary dark:text-darkink-secondary text-lg leading-relaxed">
               The dual-purpose model has proven highly successful, with the tax service side providing steady revenue
               while the mentorship programs create a growing network of trained professionals who extend the Empire Tax
               Solutions brand. The transparent revenue-sharing model has built trust and loyalty, with high retention
@@ -551,47 +551,47 @@ const EmpireTaxSolutions = () => {
 
           {/* Future Enhancements */}
           <div className={`transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-8 bg-gradient-to-b from-[#609966] to-[#9DC08B] rounded-full"></span>
+            <h2 className="text-3xl font-bold text-ink-primary dark:text-darkink-primary mb-6 flex items-center gap-3">
+              <span className="w-2 h-8 bg-primary-500 rounded-full"></span>
               Future Enhancements
             </h2>
-            <ul className="space-y-4 text-gray-700 dark:text-gray-300 mb-8">
+            <ul className="space-y-4 text-ink-secondary dark:text-darkink-secondary mb-8">
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
-                <span><strong className="text-gray-900 dark:text-white">Mobile App Development:</strong> Create native iOS and Android apps for on-the-go access to client portals, training materials, and revenue dashboards.</span>
+                <span><strong className="text-ink-primary dark:text-darkink-primary">Mobile App Development:</strong> Create native iOS and Android apps for on-the-go access to client portals, training materials, and revenue dashboards.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
-                <span><strong className="text-gray-900 dark:text-white">Video Training Library:</strong> Expand training content with interactive video courses, live webinars, and recorded Q&A sessions for mentorship participants.</span>
+                <span><strong className="text-ink-primary dark:text-darkink-primary">Video Training Library:</strong> Expand training content with interactive video courses, live webinars, and recorded Q&A sessions for mentorship participants.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
-                <span><strong className="text-gray-900 dark:text-white">Community Forum:</strong> Build a private community platform where mentorship participants can network, share strategies, and support each other.</span>
+                <span><strong className="text-ink-primary dark:text-darkink-primary">Community Forum:</strong> Build a private community platform where mentorship participants can network, share strategies, and support each other.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
-                <span><strong className="text-gray-900 dark:text-white">Advanced Analytics:</strong> Provide detailed business intelligence dashboards with predictive analytics, client retention metrics, and market insights.</span>
+                <span><strong className="text-ink-primary dark:text-darkink-primary">Advanced Analytics:</strong> Provide detailed business intelligence dashboards with predictive analytics, client retention metrics, and market insights.</span>
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-[#609966] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
-                <span><strong className="text-gray-900 dark:text-white">AI-Powered Tax Assistant:</strong> Integrate AI chatbot to answer common tax questions, provide preliminary tax estimates, and guide users through document preparation.</span>
+                <span><strong className="text-ink-primary dark:text-darkink-primary">AI-Powered Tax Assistant:</strong> Integrate AI chatbot to answer common tax questions, provide preliminary tax estimates, and guide users through document preparation.</span>
               </li>
             </ul>
           </div>
 
           {/* Conclusion */}
           <div className={`transition-all duration-1000 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-gradient-to-br from-[#609966] to-[#9DC08B] rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-primary-500 rounded-2xl p-8 md:p-12 text-white">
               <h2 className="text-3xl font-bold mb-4">Empowering Financial Freedom & Entrepreneurship</h2>
               <p className="text-lg leading-relaxed mb-6 text-white/90">
                 Empire Tax Solutions demonstrates the power of innovative platform design that serves multiple audiences
@@ -609,10 +609,10 @@ const EmpireTaxSolutions = () => {
         </article>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between items-center mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex justify-between items-center mt-16 pt-8 border-t border-border dark:border-darkborder">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-lg border border-gray-300 dark:border-gray-700 hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-2 px-6 py-3 bg-bg-surface dark:bg-darksurface text-ink-secondary dark:text-darkink-secondary font-semibold rounded-lg border border-border dark:border-darkborder hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -621,7 +621,7 @@ const EmpireTaxSolutions = () => {
           </button>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             Back to Top
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

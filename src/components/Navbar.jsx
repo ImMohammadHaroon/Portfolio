@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg'
+        ? 'bg-bg-surface/90 dark:bg-darksurface/90 backdrop-blur-lg shadow-sm border-b border-border/80 dark:border-darkborder/80'
         : 'bg-transparent'
         }`}
     >
@@ -42,14 +42,14 @@ const Navbar = () => {
                 to="home"
                 smooth={true}
                 duration={500}
-                className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#609966] to-[#40513B] dark:from-[#EDF1D6] dark:to-[#9DC08B] bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
+                className="text-2xl md:text-3xl font-bold text-primary-500 cursor-pointer hover:text-primary-600 transition-colors"
               >
                 DevOwl
               </ScrollLink>
             ) : (
               <RouterLink
                 to="/"
-                className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#609966] to-[#40513B] dark:from-[#EDF1D6] dark:to-[#9DC08B] bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
+                className="text-2xl md:text-3xl font-bold text-primary-500 cursor-pointer hover:text-primary-600 transition-colors"
               >
                 DevOwl
               </RouterLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   duration={500}
                   spy={true}
                   offset={-80}
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
+                  className="text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
                 >
                   {link.name}
                 </ScrollLink>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 <RouterLink
                   key={link.to}
                   to={`/#${link.to}`}
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
+                  className="text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
                 >
                   {link.name}
                 </RouterLink>
@@ -85,12 +85,12 @@ const Navbar = () => {
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all transform hover:scale-110"
+              className="p-2 rounded-full bg-bg-subtle dark:bg-darksubtle hover:bg-border dark:hover:bg-darkborder transition-all transform hover:scale-110"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
                 <svg
-                  className="w-5 h-5 text-yellow-500"
+                  className="w-5 h-5 text-primary-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-primary-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -117,12 +117,12 @@ const Navbar = () => {
             {/* Mobile Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
+              className="p-2 rounded-full bg-bg-subtle dark:bg-darksubtle hover:bg-border dark:hover:bg-darkborder transition-all"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
                 <svg
-                  className="w-5 h-5 text-yellow-500"
+                  className="w-5 h-5 text-primary-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -134,7 +134,7 @@ const Navbar = () => {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-primary-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -145,7 +145,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -189,7 +189,7 @@ const Navbar = () => {
           : 'max-h-0 opacity-0 overflow-hidden'
           }`}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-bg-surface/95 dark:bg-darksurface/95 backdrop-blur-lg shadow-sm border-t border-border dark:border-darkborder">
           {navLinks.map((link) => (
             location.pathname === '/' ? (
               <ScrollLink
@@ -200,7 +200,7 @@ const Navbar = () => {
                 spy={true}
                 offset={-80}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
+                className="block text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
               >
                 {link.name}
               </ScrollLink>
@@ -209,7 +209,7 @@ const Navbar = () => {
                 key={link.to}
                 to={`/#${link.to}`}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
+                className="block text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
               >
                 {link.name}
               </RouterLink>

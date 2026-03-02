@@ -182,7 +182,7 @@ const Contact = () => {
         </svg>
       ),
       url: 'https://github.com/ImMohammadHaroon',
-      color: 'hover:bg-gray-800 dark:hover:bg-gray-700',
+      color: 'hover:bg-primary-500',
     },
     {
       name: 'LinkedIn',
@@ -192,7 +192,7 @@ const Contact = () => {
         </svg>
       ),
       url: 'https://www.linkedin.com/in/mohammad-haroon-9b9356362/',
-      color: 'hover:bg-blue-600',
+      color: 'hover:bg-primary-500',
     },
     {
       name: 'Instagram',
@@ -202,19 +202,19 @@ const Contact = () => {
         </svg>
       ),
       url: 'https://www.instagram.com/mohammad_haro.on',
-      color: 'hover:bg-pink-600',
+      color: 'hover:bg-primary-500',
     },
   ];
 
   return (
-    <section ref={contactRef} id="contact" className="min-h-screen bg-white dark:bg-gray-900 py-20">
+    <section ref={contactRef} id="contact" className="min-h-screen bg-bg-main dark:bg-darkbg py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-ink-primary dark:text-darkink-primary mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-ink-muted dark:text-darkink-muted max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
         </div>
@@ -223,10 +223,10 @@ const Contact = () => {
           {/* Contact Information */}
           <div className={`space-y-8 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} transition-all duration-1000`}>
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+              <h3 className="text-2xl font-bold text-ink-primary dark:text-darkink-primary mb-6">
                 Contact Information
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-ink-muted dark:text-darkink-muted mb-8">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
 
@@ -235,22 +235,22 @@ const Contact = () => {
                 {contactInfo.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-xl hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#609966] to-[#9DC08B] rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{item.label}</p>
+                      <p className="text-sm text-ink-muted dark:text-darkink-muted">{item.label}</p>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-gray-800 dark:text-white font-medium hover:text-[#609966] dark:hover:text-[#9DC08B] transition-colors"
+                          className="text-ink-primary dark:text-darkink-primary font-medium hover:text-primary-500 transition-colors"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-gray-800 dark:text-white font-medium">{item.value}</p>
+                        <p className="text-ink-primary dark:text-darkink-primary font-medium">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -260,7 +260,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+              <h4 className="text-xl font-bold text-ink-primary dark:text-darkink-primary mb-4">
                 Connect With Me
               </h4>
               <div className="flex gap-4">
@@ -270,7 +270,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-700 dark:text-gray-300 ${social.color} hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg`}
+                    className={`p-3 bg-bg-subtle dark:bg-darksubtle rounded-lg text-ink-secondary dark:text-darkink-secondary ${social.color} hover:text-white transition-all duration-300 transform hover:scale-110`}
                     title={social.name}
                   >
                     {social.icon}
@@ -280,22 +280,22 @@ const Contact = () => {
             </div>
 
             {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full">
-              <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-              <span className="text-green-700 dark:text-green-400 font-medium">Available for freelance work</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-success-soft rounded-full border border-success-500/20">
+              <span className="w-3 h-3 bg-success-500 rounded-full animate-pulse"></span>
+              <span className="text-success-500 font-medium">Available for freelance work</span>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className={`${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'} transition-all duration-1000 delay-200`}>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder p-8 rounded-2xl shadow-sm">
+              <h3 className="text-2xl font-bold text-ink-primary dark:text-darkink-primary mb-6">
                 Send Me a Message
               </h3>
 
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-ink-secondary dark:text-darkink-secondary mb-2">
                   Your Name *
                 </label>
                 <input
@@ -305,12 +305,12 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${touched.name && errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                    } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  className={`w-full px-4 py-3 bg-bg-surface dark:bg-darkbg border ${touched.name && errors.name ? 'border-error-500' : 'border-border dark:border-darkborder'
+                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-ink-primary dark:text-darkink-primary`}
                   placeholder="John Doe"
                 />
                 {touched.name && errors.name && (
-                  <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                  <p className="mt-1 text-sm text-error-500 flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                     </svg>
@@ -321,7 +321,7 @@ const Contact = () => {
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-ink-secondary dark:text-darkink-secondary mb-2">
                   Your Email *
                 </label>
                 <input
@@ -331,12 +331,12 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${touched.email && errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                    } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  className={`w-full px-4 py-3 bg-bg-surface dark:bg-darkbg border ${touched.email && errors.email ? 'border-error-500' : 'border-border dark:border-darkborder'
+                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-ink-primary dark:text-darkink-primary`}
                   placeholder="john@example.com"
                 />
                 {touched.email && errors.email && (
-                  <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                  <p className="mt-1 text-sm text-error-500 flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                     </svg>
@@ -347,7 +347,7 @@ const Contact = () => {
 
               {/* Subject Field */}
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-ink-secondary dark:text-darkink-secondary mb-2">
                   Subject *
                 </label>
                 <input
@@ -357,12 +357,12 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${touched.subject && errors.subject ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                    } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white`}
+                  className={`w-full px-4 py-3 bg-bg-surface dark:bg-darkbg border ${touched.subject && errors.subject ? 'border-error-500' : 'border-border dark:border-darkborder'
+                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-ink-primary dark:text-darkink-primary`}
                   placeholder="Project Inquiry"
                 />
                 {touched.subject && errors.subject && (
-                  <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                  <p className="mt-1 text-sm text-error-500 flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                     </svg>
@@ -373,7 +373,7 @@ const Contact = () => {
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-ink-secondary dark:text-darkink-secondary mb-2">
                   Message *
                 </label>
                 <textarea
@@ -383,12 +383,12 @@ const Contact = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   rows="5"
-                  className={`w-full px-4 py-3 bg-white dark:bg-gray-900 border ${touched.message && errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                    } rounded-lg focus:ring-2 focus:ring-[#609966] focus:border-transparent transition-all duration-300 text-gray-800 dark:text-white resize-none`}
+                  className={`w-full px-4 py-3 bg-bg-surface dark:bg-darkbg border ${touched.message && errors.message ? 'border-error-500' : 'border-border dark:border-darkborder'
+                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-ink-primary dark:text-darkink-primary resize-none`}
                   placeholder="Tell me about your project..."
                 ></textarea>
                 {touched.message && errors.message && (
-                  <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                  <p className="mt-1 text-sm text-error-500 flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                     </svg>
@@ -401,7 +401,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-[#609966] to-[#9DC08B] text-white font-semibold rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                className="w-full px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-white font-semibold rounded-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
@@ -423,11 +423,11 @@ const Contact = () => {
 
               {/* Success Message */}
               {submitStatus === 'success' && (
-                <div className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 rounded-lg flex items-center gap-3 animate-fade-in">
-                  <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="p-4 bg-success-soft border border-success-500 rounded-lg flex items-center gap-3 animate-fade-in">
+                  <svg className="w-6 h-6 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <p className="text-green-700 dark:text-green-400 font-medium">
+                  <p className="text-success-500 font-medium">
                     Thank you! Your message has been sent successfully. I'll get back to you soon.
                   </p>
                 </div>

@@ -36,7 +36,7 @@ const CustomCursor = () => {
     <>
       {/* Main cursor */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
@@ -54,13 +54,13 @@ const CustomCursor = () => {
           <motion.div
             className="absolute inset-0 rounded-full border-2"
             style={{
-              borderColor: 'rgba(96, 153, 102, 0.8)',
+              borderColor: 'rgba(85, 107, 47, 0.8)',
             }}
             animate={{
               scale: isPointer ? 1.2 : 1,
               borderColor: isPointer 
-                ? 'rgba(157, 192, 139, 1)' 
-                : 'rgba(96, 153, 102, 0.8)',
+                ? 'rgba(70, 88, 38, 1)' 
+                : 'rgba(85, 107, 47, 0.8)',
             }}
             transition={{
               duration: 0.3,
@@ -71,7 +71,7 @@ const CustomCursor = () => {
           <motion.div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
-              background: 'linear-gradient(135deg, #609966 0%, #9DC08B 100%)',
+              background: '#556B2F',
             }}
             animate={{
               width: isPointer ? 12 : 8,
@@ -101,9 +101,9 @@ const CustomCursor = () => {
         <div 
           className="w-2 h-2 rounded-full"
           style={{
-            background: 'linear-gradient(135deg, #9DC08B 0%, #EDF1D6 100%)',
+            background: '#556B2F',
             opacity: 0.6,
-            filter: 'blur(2px)',
+            filter: 'none',
           }}
         />
       </motion.div>
@@ -125,8 +125,8 @@ const CustomCursor = () => {
         <div 
           className="w-3 h-3 rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(96, 153, 102, 0.4) 0%, transparent 70%)',
-            filter: 'blur(4px)',
+            background: 'rgba(85, 107, 47, 0.25)',
+            filter: 'none',
           }}
         />
       </motion.div>

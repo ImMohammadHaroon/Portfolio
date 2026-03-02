@@ -94,23 +94,23 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 overflow-hidden">
+    <section className="py-20 bg-bg-main dark:bg-darkbg overflow-hidden">
       <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-ink-primary dark:text-darkink-primary mb-4">
             My Skills
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-ink-muted dark:text-darkink-muted max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
 
         {/* Infinite Scroll Container */}
         <div className="relative">
-          {/* Gradient overlays for smooth fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+          {/* Edge overlays for smooth fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-bg-main/95 dark:bg-darkbg/95 z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-bg-main/95 dark:bg-darkbg/95 z-10 pointer-events-none"></div>
 
           {/* Scrolling Skills */}
           <div className="overflow-hidden">
@@ -143,7 +143,7 @@ const Skills = () => {
 const SkillCard = ({ skill }) => {
   return (
     <motion.div
-      className="flex flex-col items-center justify-center min-w-[140px] p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 group"
+      className="flex flex-col items-center justify-center min-w-[140px] p-6 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
@@ -158,7 +158,7 @@ const SkillCard = ({ skill }) => {
       </div>
 
       {/* Skill Name */}
-      <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">
+      <h3 className="text-sm font-semibold text-ink-primary dark:text-darkink-primary text-center">
         {skill.name}
       </h3>
     </motion.div>
