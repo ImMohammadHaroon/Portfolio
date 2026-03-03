@@ -14,6 +14,7 @@ const EcommerceProject = lazy(() => import('./pages/projects/EcommerceProject'))
 const Foncentra = lazy(() => import('./pages/projects/Foncentra'));
 const EmpireTaxSolutions = lazy(() => import('./pages/projects/EmpireTaxSolutions'));
 const ApertureFutures = lazy(() => import('./pages/projects/ApertureFutures'));
+const WordyApp = lazy(() => import('./pages/projects/WordyApp'));
 const AllProjects = lazy(() => import('./pages/AllProjects'));
 
 function ScrollToTop() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="/project/foncentra" element={<Foncentra />} />
             <Route path="/project/empire-tax-solutions" element={<EmpireTaxSolutions />} />
             <Route path="/project/aperture-futures" element={<ApertureFutures />} />
+            <Route path="/project/wordy-app" element={<WordyApp />} />
           </Routes>
         </Suspense>
       </div>

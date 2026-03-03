@@ -6,6 +6,7 @@ import EcommerceImage from '../assets/EcommerceProject.webp';
 import FoncentraImage from '../assets/foncentra.webp';
 import EmpireImage from '../assets/empire-solution.webp';
 import ApertureImage from '../assets/bluelines-lifeline-rag.webp';
+import WordyImage from '../assets/wordy.webp';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -89,6 +90,15 @@ const Projects = () => {
       category: 'AI & Machine Learning',
       technologies: ['React', 'Python', 'Flask', 'RAG', 'LangChain', 'OpenAI', 'Vector DB'],
       link: '/project/aperture-futures'
+    },
+    {
+      id: 7,
+      title: 'Wordy app: Gentle Language Learning',
+      description: 'A WordPress-powered language learning app that shows mini flashcards naturally across daily workflows, using smart repetition for vocabulary growth without interrupting focus.',
+      image: WordyImage,
+      category: 'Web Development',
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'AJAX', 'WP REST API'],
+      link: '/project/wordy-app'
     }
   ];
 
