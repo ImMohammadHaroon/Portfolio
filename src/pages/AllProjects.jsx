@@ -12,9 +12,9 @@ const AllProjects = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg transition-colors duration-300">
       <SEOHead
-        title="All Projects - Mohammad Haroon | Full Stack Developer Portfolio"
-        description="Explore the complete portfolio of Mohammad Haroon: AI-powered platforms, e-commerce solutions, WordPress development, and modern web applications built with React, Node.js, and Python."
-        keywords="Mohammad Haroon projects, Full Stack Developer portfolio, React projects, WordPress projects, AI development, E-commerce platforms, Web development portfolio"
+        title="Mohammad Haroon Portfolio Projects | Full Stack Developer"
+        description="Explore the complete Mohammad Haroon portfolio: AI-powered platforms, e-commerce solutions, WordPress development, and modern web applications built with React, Node.js, and Python."
+        keywords="Mohammad Haroon, Mohammad Haroon Portfolio, Mohammad Haroon projects, Full Stack Developer portfolio, React projects, WordPress projects, AI development, E-commerce platforms, Web development portfolio"
         canonicalUrl="https://devowl.me/projects"
         ogType="website"
         breadcrumbs={[

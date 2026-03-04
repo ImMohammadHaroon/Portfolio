@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const SEOHead = ({
-    title = "Haroon's Portfolio - Mohammad Haroon | Full Stack Web Developer",
-    description = 'Official portfolio of Mohammad Haroon, a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies.',
-    keywords = "Haroon's Portfolio, Mohammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, Portfolio",
+    title = "Mohammad Haroon Portfolio | Full Stack Web Developer",
+    description = 'Official Mohammad Haroon portfolio of a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies.',
+    keywords = "Mohammad Haroon, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, Portfolio",
     canonicalUrl = 'https://devowl.me/',
     ogImage = 'https://devowl.me/og-image.jpg',
     ogType = 'website',

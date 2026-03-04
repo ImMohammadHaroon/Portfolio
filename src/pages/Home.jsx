@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <div>
       <SEOHead
-        title="Haroon's Portfolio - Mohammad Haroon | Full Stack Web Developer"
-        description="Official portfolio of Mohammad Haroon, a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
-        keywords="Haroon's Portfolio, Mohammad Haroon, Muhammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
+        title="Mohammad Haroon Portfolio | Full Stack Web Developer"
+        description="Official Mohammad Haroon portfolio of a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
+        keywords="Mohammad Haroon, Mohammad Haroon Portfolio, Haroon's Portfolio, Muhammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
         ogImage="https://devowl.me/og-image.jpg"
       />
