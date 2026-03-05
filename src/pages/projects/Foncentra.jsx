@@ -17,9 +17,9 @@ const Foncentra = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg">
       <SEOHead
-        title="Foncentra - E-Learning & Digital Publishing Platform | Mohammad Haroon Portfolio"
-        description="Foncentra: A modern e-learning and digital publishing platform built with WordPress and GSAP animations. Features blogs, articles, and eBooks for personal growth and productivity. Developed by Mohammad Haroon."
-        keywords="Foncentra, E-Learning Platform, WordPress, GSAP Animation, Digital Publishing, Education, Personal Growth, Productivity, Mohammad Haroon"
+        title="Foncentra - E-Learning & Digital Publishing Platform | Muhammad Haroon Portfolio"
+        description="Foncentra: A modern e-learning and digital publishing platform built with WordPress and GSAP animations. Features blogs, articles, and eBooks for personal growth and productivity. Developed by Muhammad Haroon."
+        keywords="Foncentra, E-Learning Platform, WordPress, GSAP Animation, Digital Publishing, Education, Personal Growth, Productivity, Muhammad Haroon, Mohammad Haroon"
         canonicalUrl="https://devowl.me/project/foncentra"
         ogType="article"
         publishedDate="2025-09-01"
@@ -35,7 +35,8 @@ const Foncentra = () => {
           "name": "Foncentra: E-Learning & Digital Publishing Platform",
           "author": {
             "@type": "Person",
-            "name": "Mohammad Haroon",
+            "name": "Muhammad Haroon",
+            "alternateName": "Mohammad Haroon",
             "url": "https://devowl.me"
           },
           "description": "A modern e-learning platform delivering valuable insights through blogs, articles, and eBooks to help users achieve personal growth and productivity.",

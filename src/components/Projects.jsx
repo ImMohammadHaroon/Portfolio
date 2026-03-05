@@ -104,9 +104,13 @@ const Projects = () => {
 
   const categories = ['All', 'AI & Machine Learning', 'Web Development', 'Full-Stack Development'];
 
+  const isAllProjectsPage = location.pathname === '/projects';
+  const latestProjects = [...projects].reverse().slice(0, 6);
+  const visibleProjects = isAllProjectsPage ? projects : latestProjects;
+
   const filteredProjects = activeFilter === 'All'
-    ? projects
-    : projects.filter(project => project.category === activeFilter);
+    ? visibleProjects
+    : visibleProjects.filter(project => project.category === activeFilter);
 
   return (
     <section ref={projectsRef} id="work" className="min-h-screen bg-bg-subtle dark:bg-darksubtle py-20">

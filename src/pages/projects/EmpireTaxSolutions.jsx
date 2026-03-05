@@ -17,9 +17,9 @@ const EmpireTaxSolutions = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg">
       <SEOHead
-        title="Empire Tax Solutions - Financial Services Platform | Mohammad Haroon Portfolio"
-        description="Empire Tax Solutions: A dual-purpose WordPress platform offering expert tax services and business mentorship programs. Features three-tiered mentorship with revenue-sharing. Developed by Mohammad Haroon."
-        keywords="Empire Tax Solutions, Tax Services, Business Mentorship, Revenue Sharing, WordPress, Financial Platform, Tax Preparation, Entrepreneurship, Mohammad Haroon"
+        title="Empire Tax Solutions - Financial Services Platform | Muhammad Haroon Portfolio"
+        description="Empire Tax Solutions: A dual-purpose WordPress platform offering expert tax services and business mentorship programs. Features three-tiered mentorship with revenue-sharing. Developed by Muhammad Haroon."
+        keywords="Empire Tax Solutions, Tax Services, Business Mentorship, Revenue Sharing, WordPress, Financial Platform, Tax Preparation, Entrepreneurship, Muhammad Haroon, Mohammad Haroon"
         canonicalUrl="https://devowl.me/project/empire-tax-solutions"
         ogType="article"
         publishedDate="2025-07-20"
@@ -35,7 +35,8 @@ const EmpireTaxSolutions = () => {
           "name": "Empire Tax Solutions: Financial Services & Mentorship Platform",
           "author": {
             "@type": "Person",
-            "name": "Mohammad Haroon",
+            "name": "Muhammad Haroon",
+            "alternateName": "Mohammad Haroon",
             "url": "https://devowl.me"
           },
           "description": "A dual-purpose platform empowering individuals with expert tax services while helping aspiring entrepreneurs build their own successful tax businesses through structured mentorship programs.",

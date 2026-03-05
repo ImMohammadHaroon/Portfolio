@@ -12,9 +12,9 @@ const AllProjects = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg transition-colors duration-300">
       <SEOHead
-        title="Mohammad Haroon Portfolio Projects | Full Stack Developer"
-        description="Explore the complete Mohammad Haroon portfolio: AI-powered platforms, e-commerce solutions, WordPress development, and modern web applications built with React, Node.js, and Python."
-        keywords="Mohammad Haroon, Mohammad Haroon Portfolio, Mohammad Haroon projects, Full Stack Developer portfolio, React projects, WordPress projects, AI development, E-commerce platforms, Web development portfolio"
+        title="Muhammad Haroon Portfolio Projects | Full Stack Developer"
+        description="Explore the complete Muhammad Haroon (Mohammad Haroon) portfolio: AI-powered platforms, e-commerce solutions, WordPress development, and modern web applications built with React, Node.js, and Python."
+        keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Muhammad Haroon projects, Full Stack Developer portfolio, React projects, WordPress projects, AI development, E-commerce platforms, Web development portfolio"
         canonicalUrl="https://devowl.me/projects"
         ogType="website"
         breadcrumbs={[
@@ -24,11 +24,12 @@ const AllProjects = () => {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Mohammad Haroon - Project Portfolio",
-          "description": "Complete portfolio of projects by Mohammad Haroon, a Full Stack Web Developer specializing in React, Node.js, Python, and WordPress.",
+          "name": "Muhammad Haroon - Project Portfolio",
+          "description": "Complete portfolio of projects by Muhammad Haroon (Mohammad Haroon), a Full Stack Web Developer specializing in React, Node.js, Python, and WordPress.",
           "author": {
             "@type": "Person",
-            "name": "Mohammad Haroon",
+            "name": "Muhammad Haroon",
+            "alternateName": "Mohammad Haroon",
             "url": "https://devowl.me"
           },
           "mainEntity": {

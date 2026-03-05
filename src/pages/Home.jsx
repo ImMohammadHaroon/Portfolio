@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <div>
       <SEOHead
-        title="Mohammad Haroon Portfolio | Full Stack Web Developer"
-        description="Official Mohammad Haroon portfolio of a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
-        keywords="Mohammad Haroon, Mohammad Haroon Portfolio, Haroon's Portfolio, Muhammad Haroon, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
+        title="Muhammad Haroon Portfolio | Full Stack Web Developer"
+        description="Official Muhammad Haroon (Mohammad Haroon) portfolio of a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
+        keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
         ogImage="https://devowl.me/og-image.jpg"
       />
@@ -39,7 +39,7 @@ const Home = () => {
               <div className="relative">
                 <img
                   src={aboutImage}
-                  alt="Mohammad Haroon - Full Stack Web Developer from Bahawalpur, Pakistan"
+                  alt="Muhammad Haroon (Mohammad Haroon) - Full Stack Web Developer from Bahawalpur, Pakistan"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="lazy"
                   width="600"
@@ -54,7 +54,7 @@ const Home = () => {
             <div className="space-y-8 order-1 lg:order-2">
               {/* Introduction */}
               <p className="text-lg md:text-xl text-ink-secondary dark:text-darkink-secondary leading-relaxed">
-                I'm <span className="font-bold text-primary-500">Mohammad Haroon</span>, a passionate Full Stack Web Developer based in Bahawalpur, Pakistan.
+                I'm <span className="font-bold text-primary-500">Muhammad Haroon</span>, a passionate Full Stack Web Developer based in Bahawalpur, Pakistan.
                 With expertise in React.js, WordPress, and modern web technologies, I create responsive,
                 interactive web experiences that solve real-world problems.
               </p>

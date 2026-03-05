@@ -66,9 +66,9 @@ const WordyApp = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg">
       <SEOHead
-        title="Wordy app - WordPress Language Learning App | Mohammad Haroon Portfolio"
+        title="Wordy app - WordPress Language Learning App | Muhammad Haroon Portfolio"
         description="Wordy app is a WordPress-powered language learning project that delivers gentle mini pop-ups and smart repetition for natural vocabulary growth in daily workflows."
-        keywords="Wordy app, language learning app, WordPress project, smart repetition, flashcards, English German Russian Italian, Mohammad Haroon"
+        keywords="Wordy app, language learning app, WordPress project, smart repetition, flashcards, English German Russian Italian, Muhammad Haroon, Mohammad Haroon"
         canonicalUrl="https://devowl.me/project/wordy-app"
         ogType="article"
         publishedDate="2026-03-03"
@@ -84,7 +84,8 @@ const WordyApp = () => {
           name: 'Wordy app',
           author: {
             '@type': 'Person',
-            name: 'Mohammad Haroon',
+            name: 'Muhammad Haroon',
+            alternateName: 'Mohammad Haroon',
             url: 'https://devowl.me'
           },
           description:

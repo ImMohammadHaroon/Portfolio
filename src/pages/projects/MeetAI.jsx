@@ -17,9 +17,9 @@ const MeetAI = () => {
   return (
     <div className="min-h-screen bg-bg-main dark:bg-darkbg">
       <SEOHead
-        title="Meet AI - AI-Powered Meeting Assistant | Mohammad Haroon Portfolio"
-        description="Meet AI: An intelligent meeting assistant that transforms physical meeting recordings into searchable knowledge using speech recognition, speaker identification, and AI chatbots. Full Stack Development project by Mohammad Haroon."
-        keywords="Meet AI, AI meeting assistant, speech recognition, speaker identification, NLP, transcription, Mohammad Haroon, Full Stack Developer, React, Python, Machine Learning"
+        title="Meet AI - AI-Powered Meeting Assistant | Muhammad Haroon Portfolio"
+        description="Meet AI: An intelligent meeting assistant that transforms physical meeting recordings into searchable knowledge using speech recognition, speaker identification, and AI chatbots. Full Stack Development project by Muhammad Haroon."
+        keywords="Meet AI, AI meeting assistant, speech recognition, speaker identification, NLP, transcription, Muhammad Haroon, Mohammad Haroon, Full Stack Developer, React, Python, Machine Learning"
         canonicalUrl="https://devowl.me/project/meet-ai"
         ogType="article"
         publishedDate="2025-12-01"
@@ -35,7 +35,8 @@ const MeetAI = () => {
           "name": "Meet AI: Intelligent Meeting Assistant",
           "author": {
             "@type": "Person",
-            "name": "Mohammad Haroon",
+            "name": "Muhammad Haroon",
+            "alternateName": "Mohammad Haroon",
             "url": "https://devowl.me"
           },
           "description": "AI-powered platform that transforms physical meeting recordings into searchable knowledge with transcription, speaker identification, and intelligent chatbots.",
