@@ -16,6 +16,7 @@ const EmpireTaxSolutions = lazy(() => import('./pages/projects/EmpireTaxSolution
 const ApertureFutures = lazy(() => import('./pages/projects/ApertureFutures'));
 const WordyApp = lazy(() => import('./pages/projects/WordyApp'));
 const AllProjects = lazy(() => import('./pages/AllProjects'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -60,6 +61,7 @@ function App() {
             <Route path="/project/empire-tax-solutions" element={<EmpireTaxSolutions />} />
             <Route path="/project/aperture-futures" element={<ApertureFutures />} />
             <Route path="/project/wordy-app" element={<WordyApp />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </div>
