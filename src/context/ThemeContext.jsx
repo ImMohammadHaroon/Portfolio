@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext();
 
+/** @see https://github.com/reactjs/eslint-plugin-react/blob/master/docs/rules/react-refresh-only-export-components.md */
+// eslint-disable-next-line react-refresh/only-export-components -- hook colocated with ThemeProvider
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {

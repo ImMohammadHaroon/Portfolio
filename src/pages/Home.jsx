@@ -8,6 +8,7 @@ import aboutImage from '../assets/about.webp';
 const Skills = lazy(() => import('../components/Skills'));
 const ExperienceTimeline = lazy(() => import('../components/ExperienceTimeline'));
 const Projects = lazy(() => import('../components/Projects'));
+const Publications = lazy(() => import('../components/Publications'));
 const Contact = lazy(() => import('../components/Contact'));
 const Footer = lazy(() => import('../components/Footer'));
 
@@ -160,6 +161,10 @@ const Home = () => {
       {/* Projects Section */}
       <Suspense fallback={<SectionLoader />}>
         <Projects />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <Publications />
       </Suspense>
 
       {/* Contact Section */}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
+import Publications from '../components/Publications';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 
@@ -49,6 +50,7 @@ const AllProjects = () => {
       <Navbar />
       <div className="pt-16">
         <Projects />
+        <Publications />
       </div>
       <Footer />
     </div>

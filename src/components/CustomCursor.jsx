@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+const MotionDiv = motion.div;
+
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
@@ -35,7 +37,7 @@ const CustomCursor = () => {
   return (
     <>
       {/* Main cursor */}
-      <motion.div
+      <MotionDiv
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         animate={{
           x: mousePosition.x - 16,
@@ -51,7 +53,7 @@ const CustomCursor = () => {
       >
         <div className="relative w-8 h-8">
           {/* Outer ring */}
-          <motion.div
+          <MotionDiv
             className="absolute inset-0 rounded-full border-2"
             style={{
               borderColor: 'rgba(85, 107, 47, 0.8)',
@@ -68,7 +70,7 @@ const CustomCursor = () => {
           />
           
           {/* Inner dot */}
-          <motion.div
+          <MotionDiv
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
               background: '#556B2F',
@@ -82,10 +84,10 @@ const CustomCursor = () => {
             }}
           />
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Trail cursor */}
-      <motion.div
+      <MotionDiv
         className="fixed top-0 left-0 pointer-events-none z-[9998]"
         animate={{
           x: mousePosition.x - 4,
@@ -106,10 +108,10 @@ const CustomCursor = () => {
             filter: 'none',
           }}
         />
-      </motion.div>
+      </MotionDiv>
 
       {/* Second trail */}
-      <motion.div
+      <MotionDiv
         className="fixed top-0 left-0 pointer-events-none z-[9997]"
         animate={{
           x: mousePosition.x - 6,
@@ -129,7 +131,7 @@ const CustomCursor = () => {
             filter: 'none',
           }}
         />
-      </motion.div>
+      </MotionDiv>
     </>
   );
 };

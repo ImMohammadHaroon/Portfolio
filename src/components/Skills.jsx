@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const MotionDiv = motion.div;
+
 const Skills = () => {
   // Array of skills with their names and icon URLs (using CDN for official logos)
   const skills = [
@@ -114,7 +116,7 @@ const Skills = () => {
 
           {/* Scrolling Skills */}
           <div className="overflow-hidden">
-            <motion.div
+            <MotionDiv
               className="flex gap-8 py-8"
               animate={{
                 x: [0, -1 * (skills.length * 160)],
@@ -131,7 +133,7 @@ const Skills = () => {
               {duplicatedSkills.map((skill, index) => (
                 <SkillCard key={`${skill.name}-${index}`} skill={skill} />
               ))}
-            </motion.div>
+            </MotionDiv>
           </div>
         </div>
       </div>
@@ -142,7 +144,7 @@ const Skills = () => {
 // Skill Card Component
 const SkillCard = ({ skill }) => {
   return (
-    <motion.div
+    <MotionDiv
       className="flex flex-col items-center justify-center min-w-[140px] p-6 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
@@ -161,7 +163,7 @@ const SkillCard = ({ skill }) => {
       <h3 className="text-sm font-semibold text-ink-primary dark:text-darkink-primary text-center">
         {skill.name}
       </h3>
-    </motion.div>
+    </MotionDiv>
   );
 };
 
