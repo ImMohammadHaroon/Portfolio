@@ -64,14 +64,15 @@ DevOwl is a production-ready personal portfolio for **Muhammad Haroon**, a Full 
 
 ### 🤖 AI & Machine Learning
 
-#### [Meet AI — Intelligent Meeting Assistant](https://devowl.me/project/meet-ai)
-> AI-powered assistant that transforms in-person meeting recordings into searchable knowledge bases.
+#### [Meeting AI](https://devowl.me/project/meet-ai)
+> Production-grade platform automating the complete meeting workflow with live WebRTC conferencing, AI transcription, and intelligent notes.
 
-- Speaker diarization, ASR transcription (~95% accuracy), NLP summarization
-- Per-meeting RAG chatbot with timestamp citations
-- Distributed processing via Celery + Redis
+- Live P2P meetings with Socket.io signaling and host-side mixed audio recording
+- OpenAI Whisper transcription + GPT-4o mini notes, task extraction, and contextual chat
+- Google Meet Chrome extension (Manifest V3) with offscreen tab capture
+- Organization-scoped collaboration via Supabase Auth and Row Level Security
 
-**Stack:** `Python` `FastAPI` `Whisper AI` `LangChain` `FAISS` `React` `TypeScript` `PostgreSQL` `AWS`
+**Stack:** `React` `Node.js` `Express` `WebRTC` `Socket.io` `OpenAI` `Supabase` `Vercel` `Render`
 
 ---
 
@@ -237,7 +238,7 @@ VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
 |---|---|
 | `/` | Home — Hero, About, Skills, Experience, Projects, Contact |
 | `/projects` | All Projects grid with category filters |
-| `/project/meet-ai` | Meet AI case study |
+| `/project/meet-ai` | Meeting AI case study |
 | `/project/syeen` | Syeen case study |
 | `/project/ecommerce` | GearNix case study |
 | `/project/foncentra` | Foncentra case study |

@@ -36,7 +36,7 @@ const AllProjects = () => {
           "mainEntity": {
             "@type": "ItemList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Meet AI - AI Meeting Assistant", "url": "https://devowl.me/project/meet-ai" },
+              { "@type": "ListItem", "position": 1, "name": "Meeting AI", "url": "https://devowl.me/project/meet-ai" },
               { "@type": "ListItem", "position": 2, "name": "Syeen - Business Collaboration Platform", "url": "https://devowl.me/project/syeen" },
               { "@type": "ListItem", "position": 3, "name": "Foncentra - E-Learning Platform", "url": "https://devowl.me/project/foncentra" },
               { "@type": "ListItem", "position": 4, "name": "GearNix - E-commerce Platform", "url": "https://devowl.me/project/ecommerce" },

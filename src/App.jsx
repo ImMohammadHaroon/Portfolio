@@ -8,7 +8,7 @@ import SectionLoader from './components/SectionLoader';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
-const MeetAI = lazy(() => import('./pages/projects/MeetAI'));
+const MeetingAI = lazy(() => import('./pages/projects/MeetingAI'));
 const Syeen = lazy(() => import('./pages/projects/Syeen'));
 const EcommerceProject = lazy(() => import('./pages/projects/EcommerceProject'));
 const Foncentra = lazy(() => import('./pages/projects/Foncentra'));
@@ -54,7 +54,7 @@ function App() {
               </>
             } />
             <Route path="/projects" element={<AllProjects />} />
-            <Route path="/project/meet-ai" element={<MeetAI />} />
+            <Route path="/project/meet-ai" element={<MeetingAI />} />
             <Route path="/project/syeen" element={<Syeen />} />
             <Route path="/project/ecommerce" element={<EcommerceProject />} />
             <Route path="/project/foncentra" element={<Foncentra />} />

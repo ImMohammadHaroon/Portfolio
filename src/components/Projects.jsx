@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import MeetAIImage from '../assets/meeting-ai.webp';
+import MeetingAIImage from '../assets/meeting-ai.webp';
 import SyeenImage from '../assets/Syeen.webp';
 import EcommerceImage from '../assets/EcommerceProject.webp';
 import FoncentraImage from '../assets/foncentra.webp';
@@ -39,11 +39,11 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Meet AI: Intelligent Meeting Assistant',
-      description: 'An AI-powered platform that transforms physical meeting recordings into searchable knowledge with automatic transcription, speaker identification, summaries, and custom chatbots for instant Q&A.',
-      image: MeetAIImage,
-      category: 'AI & Machine Learning',
-      technologies: ['Python', 'React', 'Whisper AI', 'NLP', 'FastAPI', 'PostgreSQL'],
+      title: 'Meeting AI',
+      description: 'A production-grade full-stack platform that automates the meeting workflow — live WebRTC conferencing, audio recording, Whisper transcription, GPT-powered notes, task extraction, and contextual AI chat across web and Google Meet.',
+      image: MeetingAIImage,
+      category: 'Full-Stack Development',
+      technologies: ['React', 'Node.js', 'WebRTC', 'OpenAI', 'Supabase', 'Socket.io'],
       link: '/project/meet-ai'
     },
     {
