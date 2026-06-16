@@ -12,6 +12,7 @@ const SEOHead = ({
     modifiedDate = null,
     structuredData = null,
     breadcrumbs = null,
+    noIndex = false,
 }) => {
     useEffect(() => {
         // Update document title
@@ -63,15 +64,26 @@ const SEOHead = ({
             }
         }
 
-        // Update canonical link
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) {
+        // Robots meta
+        if (noIndex) {
+            updateMetaTag('robots', 'noindex, follow');
+        } else {
+            updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+        }
+
+        // Update canonical link (skip for non-indexable pages such as 404)
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (noIndex) {
+            if (canonical) {
+                canonical.remove();
+            }
+        } else if (canonical) {
             canonical.setAttribute('href', canonicalUrl);
         } else {
-            canonical = document.createElement('link');
-            canonical.setAttribute('rel', 'canonical');
-            canonical.setAttribute('href', canonicalUrl);
-            document.head.appendChild(canonical);
+            const newCanonical = document.createElement('link');
+            newCanonical.setAttribute('rel', 'canonical');
+            newCanonical.setAttribute('href', canonicalUrl);
+            document.head.appendChild(newCanonical);
         }
 
         // Handle structured data (JSON-LD)
@@ -119,7 +131,7 @@ const SEOHead = ({
             const breadcrumbScript = document.querySelector('script[data-seo-breadcrumbs]');
             if (breadcrumbScript) breadcrumbScript.remove();
         };
-    }, [title, description, keywords, canonicalUrl, ogImage, ogType, author, publishedDate, modifiedDate, structuredData, breadcrumbs]);
+    }, [title, description, keywords, canonicalUrl, ogImage, ogType, author, publishedDate, modifiedDate, structuredData, breadcrumbs, noIndex]);
 
     return null;
 };

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
+import ProjectPageNav from '../../components/ProjectPageNav';
 import ApertureImage from '../../assets/bluelines-lifeline-rag.webp';
 
 const ApertureFutures = () => {
-  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const ApertureFutures = () => {
         modifiedDate="2026-01-31"
         breadcrumbs={[
           { name: "Home", url: "https://devowl.me/" },
-          { name: "Projects", url: "https://devowl.me/#projects" },
+          { name: "Projects", url: "https://devowl.me/projects" },
           { name: "Aperture Futures", url: "https://devowl.me/project/aperture-futures" }
         ]}
         structuredData={{
@@ -38,7 +37,7 @@ const ApertureFutures = () => {
             "@type": "Person",
             "name": "Muhammad Haroon",
             "alternateName": "Mohammad Haroon",
-            "url": "https://devowl.me"
+            "url": "https://devowl.me/"
           },
           "description": "An AI-powered platform transforming UN Security Council intelligence through advanced RAG architecture, empowering governments, diplomats, and advocacy networks with real-time insights and negotiation intelligence.",
           "applicationCategory": "BusinessApplication",
@@ -681,27 +680,7 @@ const ApertureFutures = () => {
           </div>
         </article>
 
-        {/* Navigation Buttons */}
-        <div className="flex justify-between items-center mt-16 pt-8 border-t border-border dark:border-darkborder">
-          <button
-            onClick={() => navigate('/')}
-            className="flex items-center gap-2 px-6 py-3 bg-bg-surface dark:bg-darksurface text-ink-secondary dark:text-darkink-secondary font-semibold rounded-lg border border-border dark:border-darkborder hover:shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Portfolio
-          </button>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            Back to Top
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </button>
-        </div>
+        <ProjectPageNav />
       </div>
 
       <Footer />

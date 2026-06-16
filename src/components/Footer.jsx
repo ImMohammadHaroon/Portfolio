@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+import { useLocation, Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   const [email, setEmail] = useState('');
   const [subscribeStatus, setSubscribeStatus] = useState(null);
 
@@ -18,13 +21,18 @@ const Footer = () => {
   };
 
   const quickLinks = [
-    { name: 'Home', to: 'home' },
+    { name: 'Home', to: 'home', path: '/' },
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
     { name: 'Experience', to: 'experience' },
-    { name: 'Projects', to: 'work' },
+    { name: 'Projects', to: 'work', path: '/projects' },
     { name: 'Contact', to: 'contact' },
   ];
+
+  const getQuickLinkPath = (link) => {
+    if (link.path) return link.path;
+    return `/#${link.to}`;
+  };
 
   const socialLinks = [
     {
@@ -88,19 +96,31 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.to}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    className="text-darkink-secondary hover:text-primary-500 transition-colors duration-300 cursor-pointer flex items-center gap-2 group"
-                  >
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    {link.name}
-                  </Link>
+                  {isHome && !link.path ? (
+                    <ScrollLink
+                      to={link.to}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="text-darkink-secondary hover:text-primary-500 transition-colors duration-300 cursor-pointer flex items-center gap-2 group"
+                    >
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      {link.name}
+                    </ScrollLink>
+                  ) : (
+                    <RouterLink
+                      to={getQuickLinkPath(link)}
+                      className="text-darkink-secondary hover:text-primary-500 transition-colors duration-300 cursor-pointer flex items-center gap-2 group"
+                    >
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      {link.name}
+                    </RouterLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -193,18 +213,30 @@ const Footer = () => {
           </div>
 
           {/* Back to Top */}
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="flex items-center gap-2 text-darkink-secondary hover:text-primary-500 transition-colors cursor-pointer group"
-          >
-            <span className="text-sm">Back to top</span>
-            <svg className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </Link>
+          {isHome ? (
+            <ScrollLink
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="flex items-center gap-2 text-darkink-secondary hover:text-primary-500 transition-colors cursor-pointer group"
+            >
+              <span className="text-sm">Back to top</span>
+              <svg className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+              </svg>
+            </ScrollLink>
+          ) : (
+            <RouterLink
+              to="/"
+              className="flex items-center gap-2 text-darkink-secondary hover:text-primary-500 transition-colors cursor-pointer group"
+            >
+              <span className="text-sm">Back to home</span>
+              <svg className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+              </svg>
+            </RouterLink>
+          )}
         </div>
       </div>
     </footer>

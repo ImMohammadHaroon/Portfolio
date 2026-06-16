@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,23 +87,21 @@ const Hero = () => {
             className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
           >
-            <Link
-              to="work"
-              smooth={true}
-              duration={500}
-              className="group relative px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-ink-inverse font-semibold rounded-lg transition-colors duration-300 cursor-pointer"
+            <RouterLink
+              to="/projects"
+              className="group relative px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-ink-inverse font-semibold rounded-lg transition-colors duration-300"
             >
               <span className="relative z-10">View My Work</span>
-            </Link>
+            </RouterLink>
 
-            <Link
+            <ScrollLink
               to="contact"
               smooth={true}
               duration={500}
               className="group px-8 py-4 bg-bg-surface dark:bg-darksurface text-ink-primary dark:text-darkink-primary font-semibold rounded-lg border border-border dark:border-darkborder hover:bg-bg-subtle dark:hover:bg-darksubtle transition-colors duration-300 cursor-pointer"
             >
               Get In Touch
-            </Link>
+            </ScrollLink>
           </div>
 
           {/* Social Links */}

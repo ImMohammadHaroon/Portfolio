@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
+import ProjectPageNav from '../../components/ProjectPageNav';
 import WordyImage from '../../assets/wordy.webp';
 
 const WordyApp = () => {
-  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -76,7 +75,7 @@ const WordyApp = () => {
         modifiedDate="2026-03-03"
         breadcrumbs={[
           { name: 'Home', url: 'https://devowl.me/' },
-          { name: 'Projects', url: 'https://devowl.me/#projects' },
+          { name: 'Projects', url: 'https://devowl.me/projects' },
           { name: 'Wordy app', url: 'https://devowl.me/project/wordy-app' }
         ]}
         structuredData={{
@@ -87,7 +86,7 @@ const WordyApp = () => {
             '@type': 'Person',
             name: 'Muhammad Haroon',
             alternateName: 'Mohammad Haroon',
-            url: 'https://devowl.me'
+            url: 'https://devowl.me/'
           },
           description:
             'A gentle language learning app that shows mini vocabulary pop-ups naturally during daily work, browsing, and communication with smart spaced repetition.',
@@ -312,20 +311,7 @@ const WordyApp = () => {
           </div>
         </article>
 
-        <div className={`mt-16 flex flex-wrap gap-4 justify-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <button
-            onClick={() => navigate('/projects')}
-            className="px-6 py-3 bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder text-ink-primary dark:text-darkink-primary rounded-lg hover:border-primary-500 transition-colors"
-          >
-            Back to All Projects
-          </button>
-          <button
-            onClick={() => navigate('/')}
-            className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-ink-inverse rounded-lg transition-colors"
-          >
-            Back to Home
-          </button>
-        </div>
+        <ProjectPageNav />
       </div>
 
       <Footer />

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
 import Publications from '../components/Publications';
@@ -31,7 +32,7 @@ const AllProjects = () => {
             "@type": "Person",
             "name": "Muhammad Haroon",
             "alternateName": "Mohammad Haroon",
-            "url": "https://devowl.me"
+            "url": "https://devowl.me/"
           },
           "mainEntity": {
             "@type": "ItemList",
@@ -49,6 +50,17 @@ const AllProjects = () => {
       />
       <Navbar />
       <div className="pt-16">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap gap-3" aria-label="Projects page navigation">
+          <Link to="/" className="text-sm font-medium text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 transition-colors">
+            Home
+          </Link>
+          <Link to="/#about" className="text-sm font-medium text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 transition-colors">
+            About
+          </Link>
+          <Link to="/#contact" className="text-sm font-medium text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 transition-colors">
+            Contact
+          </Link>
+        </nav>
         <Projects />
         <Publications />
       </div>

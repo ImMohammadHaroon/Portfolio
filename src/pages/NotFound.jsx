@@ -28,8 +28,8 @@ const NotFound = () => {
       <SEOHead
         title="404 — Page Not Found | Muhammad Haroon Portfolio"
         description="The page you are looking for could not be found."
-        canonicalUrl="https://devowl.me/404"
         ogType="website"
+        noIndex
       />
       <Navbar />
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
@@ -49,12 +49,26 @@ const NotFound = () => {
               The link may be broken or the page may have been removed.
             </p>
           </div>
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-full px-6 py-3 font-medium bg-primary-soft dark:bg-darksubtle text-ink-primary dark:text-darkink-primary hover:opacity-90 transition-opacity"
-          >
-            Back to home
-          </Link>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              to="/"
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 font-medium bg-primary-soft dark:bg-darksubtle text-ink-primary dark:text-darkink-primary hover:opacity-90 transition-opacity"
+            >
+              Back to home
+            </Link>
+            <Link
+              to="/projects"
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 font-medium bg-primary-500 text-white hover:bg-primary-600 transition-colors"
+            >
+              View projects
+            </Link>
+            <Link
+              to="/#contact"
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 font-medium border border-border dark:border-darkborder text-ink-primary dark:text-darkink-primary hover:border-primary-500 transition-colors"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

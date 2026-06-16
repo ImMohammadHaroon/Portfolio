@@ -21,10 +21,53 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
-    { name: 'Projects', to: 'work' },
+    { name: 'Projects', to: 'work', path: '/projects' },
     { name: 'Research', to: 'publications' },
     { name: 'Contact', to: 'contact' },
   ];
+
+  const renderNavLink = (link, className, onNavigate) => {
+    if (link.path) {
+      return (
+        <RouterLink
+          key={link.to}
+          to={link.path}
+          onClick={onNavigate}
+          className={className}
+        >
+          {link.name}
+        </RouterLink>
+      );
+    }
+
+    if (location.pathname === '/') {
+      return (
+        <ScrollLink
+          key={link.to}
+          to={link.to}
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          onClick={onNavigate}
+          className={className}
+        >
+          {link.name}
+        </ScrollLink>
+      );
+    }
+
+    return (
+      <RouterLink
+        key={link.to}
+        to={`/#${link.to}`}
+        onClick={onNavigate}
+        className={className}
+      >
+        {link.name}
+      </RouterLink>
+    );
+  };
 
   return (
     <nav
@@ -58,29 +101,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              location.pathname === '/' ? (
-                <ScrollLink
-                  key={link.to}
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  offset={-80}
-                  className="text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
-                >
-                  {link.name}
-                </ScrollLink>
-              ) : (
-                <RouterLink
-                  key={link.to}
-                  to={`/#${link.to}`}
-                  className="text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform"
-                >
-                  {link.name}
-                </RouterLink>
+            {navLinks.map((link) =>
+              renderNavLink(
+                link,
+                'text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover:scale-110 transform'
               )
-            ))}
+            )}
 
             {/* Theme Toggle Button */}
             <button
@@ -190,31 +216,13 @@ const Navbar = () => {
           }`}
       >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-bg-surface/95 dark:bg-darksurface/95 backdrop-blur-lg shadow-sm border-t border-border dark:border-darkborder">
-          {navLinks.map((link) => (
-            location.pathname === '/' ? (
-              <ScrollLink
-                key={link.to}
-                to={link.to}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-80}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
-              >
-                {link.name}
-              </ScrollLink>
-            ) : (
-              <RouterLink
-                key={link.to}
-                to={`/#${link.to}`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
-              >
-                {link.name}
-              </RouterLink>
+          {navLinks.map((link) =>
+            renderNavLink(
+              link,
+              'block text-ink-secondary dark:text-darkink-secondary hover:text-primary-500 px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer',
+              () => setMobileMenuOpen(false)
             )
-          ))}
+          )}
         </div>
       </div>
     </nav>

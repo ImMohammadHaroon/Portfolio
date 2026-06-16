@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MeetingAIImage from '../assets/meeting-ai.webp';
 import SyeenImage from '../assets/Syeen.webp';
 import EcommerceImage from '../assets/EcommerceProject.webp';
@@ -9,7 +9,6 @@ import ApertureImage from '../assets/bluelines-lifeline-rag.webp';
 import WordyImage from '../assets/wordy.webp';
 
 const Projects = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [activeFilter, setActiveFilter] = useState('All');
@@ -144,10 +143,10 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <div
+            <Link
               key={project.id}
-              onClick={() => navigate(project.link)}
-              className={`group relative bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              to={project.link}
+              className={`group relative bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -194,14 +193,10 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* View Project Button */}
-                <button
-                  onClick={() => navigate(project.link)}
-                  className="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
-                >
+                <span className="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
                   <span>View Project</span>
                   <svg
-                    className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -213,12 +208,12 @@ const Projects = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </button>
+                </span>
               </div>
 
               {/* Bottom Accent Line */}
               <div className="h-1 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -244,15 +239,15 @@ const Projects = () => {
 
         {location.pathname !== '/projects' && (
           <div className="text-center mt-16">
-            <button
-              onClick={() => navigate('/projects')}
+            <Link
+              to="/projects"
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-ink-inverse font-semibold rounded-lg transition-colors duration-300"
             >
               <span>View All Projects</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
+            </Link>
           </div>
         )}
       </div>
