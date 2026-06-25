@@ -98,6 +98,15 @@ const Projects = () => {
       category: 'Web Development',
       technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'AJAX', 'WP REST API'],
       link: '/project/wordy-app'
+    },
+    {
+      id: 8,
+      title: 'MaritimeLink: Maritime Workforce Platform',
+      description: 'A production React SPA for MaritimeLink Ltd connecting seafarers, recruiters, training providers, and admins through maritime CVs, document wallets, job marketplace, Stripe bookings, KYC compliance, and real-time messaging.',
+      image: '/maritime-link-cover.svg',
+      category: 'Full-Stack Development',
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'Socket.IO', 'Stripe', 'React Router'],
+      link: '/project/maritime-link'
     }
   ];
 

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="MaritimeLink platform cover">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <path fill="url(#wave)" d="M0 420 C200 360 400 480 600 420 C800 360 1000 480 1200 420 L1200 630 L0 630 Z"/>
+  <path fill="#38bdf8" fill-opacity="0.35" d="M0 470 C250 430 350 510 600 470 C850 430 950 510 1200 470 L1200 630 L0 630 Z"/>
+  <g transform="translate(520 220)">
+    <path fill="#f8fafc" d="M80 120 L10 90 L80 60 L150 90 Z"/>
+    <rect x="55" y="40" width="50" height="50" fill="#e2e8f0"/>
+    <line x1="80" y1="40" x2="80" y2="10" stroke="#f8fafc" stroke-width="4"/>
+    <path fill="#fbbf24" d="M72 10 L80 0 L88 10 Z"/>
+  </g>
+  <text x="600" y="140" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="56" font-weight="700">MaritimeLink</text>
+  <text x="600" y="190" text-anchor="middle" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="28">Your Gateway to Maritime Excellence</text>
+</svg>
