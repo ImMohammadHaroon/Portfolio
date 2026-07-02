@@ -12,7 +12,6 @@ const MeetingAI = lazy(() => import('./pages/projects/MeetingAI'));
 const Syeen = lazy(() => import('./pages/projects/Syeen'));
 const EcommerceProject = lazy(() => import('./pages/projects/EcommerceProject'));
 const Foncentra = lazy(() => import('./pages/projects/Foncentra'));
-const EmpireTaxSolutions = lazy(() => import('./pages/projects/EmpireTaxSolutions'));
 const ApertureFutures = lazy(() => import('./pages/projects/ApertureFutures'));
 const WordyApp = lazy(() => import('./pages/projects/WordyApp'));
 const MaritimeLink = lazy(() => import('./pages/projects/MaritimeLink'));
@@ -59,7 +58,6 @@ function App() {
             <Route path="/project/syeen" element={<Syeen />} />
             <Route path="/project/ecommerce" element={<EcommerceProject />} />
             <Route path="/project/foncentra" element={<Foncentra />} />
-            <Route path="/project/empire-tax-solutions" element={<EmpireTaxSolutions />} />
             <Route path="/project/aperture-futures" element={<ApertureFutures />} />
             <Route path="/project/wordy-app" element={<WordyApp />} />
             <Route path="/project/maritime-link" element={<MaritimeLink />} />

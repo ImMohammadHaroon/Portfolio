@@ -36,7 +36,7 @@ A personal portfolio SPA showcasing full-stack web development and AI/ML project
 
 DevOwl is a production-ready personal portfolio for **Muhammad Haroon**, a Full Stack Web Developer specializing in React.js, WordPress, and Node.js. The site is built as a React 19 + Vite SPA and includes:
 
-- **7 in-depth case study pages** with technical breakdowns, challenges, and metrics
+- **6 in-depth case study pages** with technical breakdowns, challenges, and metrics
 - **Dark / Light mode** via ThemeContext with Tailwind semantic classes
 - **Code splitting** — non-home routes and heavy sections (Skills, Projects, Contact) are lazy-loaded
 - **SEO-optimized** — canonical URLs, Open Graph, Twitter cards, and JSON-LD structured data per page
@@ -113,17 +113,6 @@ DevOwl is a production-ready personal portfolio for **Muhammad Haroon**, a Full 
 
 ---
 
-#### [Empire Tax Solutions](https://devowl.me/project/empire-tax-solutions)
-> Tax preparation services + three-tier mentorship platform (Silver / Gold / Platinum).
-
-- Encrypted document uploads, e-sign, revenue dashboards
-- MemberPress subscription tiers with revenue-sharing logic
-- 150+ active mentees, 3200+ returns filed annually
-
-**Stack:** `WordPress` `MemberPress` `WooCommerce` `Gravity Forms` `Wordfence`
-
----
-
 #### [Foncentra — E-Learning Platform](https://devowl.me/project/foncentra)
 > Digital publishing and e-learning platform with a custom WordPress theme.
 
@@ -170,7 +159,7 @@ Portfolio/
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── AllProjects.jsx  # Full grid with filters
-│   │   └── project/         # 7× lazy-loaded case studies
+│   │   └── project/         # 6× lazy-loaded case studies
 │   ├── context/
 │   │   └── ThemeContext.jsx  # Light / dark mode
 │   ├── App.jsx              # BrowserRouter, lazy routes, ScrollToTop
@@ -242,7 +231,6 @@ VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
 | `/project/syeen` | Syeen case study |
 | `/project/ecommerce` | GearNix case study |
 | `/project/foncentra` | Foncentra case study |
-| `/project/empire-tax-solutions` | Empire Tax Solutions case study |
 | `/project/aperture-futures` | Aperture Futures case study |
 | `/project/wordy-app` | Wordy App case study |
 

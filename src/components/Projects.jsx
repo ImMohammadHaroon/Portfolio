@@ -4,7 +4,6 @@ import MeetingAIImage from '../assets/meeting-ai.webp';
 import SyeenImage from '../assets/Syeen.webp';
 import EcommerceImage from '../assets/EcommerceProject.webp';
 import FoncentraImage from '../assets/foncentra.webp';
-import EmpireImage from '../assets/empire-solution.webp';
 import ApertureImage from '../assets/bluelines-lifeline-rag.webp';
 import WordyImage from '../assets/wordy.webp';
 
@@ -71,15 +70,6 @@ const Projects = () => {
       category: 'Web Development',
       technologies: ['WordPress', 'GSAP', 'JavaScript', 'CSS3', 'PHP', 'Custom Theme'],
       link: '/project/foncentra'
-    },
-    {
-      id: 5,
-      title: 'Empire Tax Solutions: Building Tax Empires',
-      description: 'A dual-purpose WordPress platform serving tax clients with professional services while empowering aspiring entrepreneurs through structured mentorship programs with three-tiered revenue-sharing models.',
-      image: EmpireImage,
-      category: 'Web Development',
-      technologies: ['WordPress', 'PHP', 'WooCommerce', 'MemberPress', 'Payment Integration', 'Custom Theme'],
-      link: '/project/empire-tax-solutions'
     },
     {
       id: 6,

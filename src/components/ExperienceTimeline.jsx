@@ -29,9 +29,26 @@ const ExperienceTimeline = () => {
 
   const experiences = [
     {
+      title: 'Full Stack Developer Intern (MERN Stack)',
+      company: 'ML Bench',
+      duration: 'June 2026 – September 2026',
+      durationDetail: '3 Months',
+      location: 'Remote',
+      status: 'in-progress',
+      description:
+        'Working as a Full Stack Intern at ML Bench, building and maintaining web applications using MongoDB, Express.js, React.js, and Node.js. Contributing to real-world projects across frontend UI, REST APIs, and database design.',
+      responsibilities: [
+        'Building and maintaining web applications with the MERN stack',
+        'Contributing to frontend UI, REST APIs, and database design',
+        'Collaborating on real-world projects with the engineering team',
+      ],
+      technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS'],
+      achievements: [],
+    },
+    {
       title: 'Freelance Web Developer',
       company: 'Fiverr & Freelancer',
-      duration: 'Feb 2025 - Present',
+      duration: 'Feb 2025 – May 2026',
       location: 'Remote',
       description:
         'Delivered WordPress and React.js solutions to international clients with a focus on performance and user experience.',
@@ -114,6 +131,8 @@ const ExperienceTimeline = () => {
                   className={`ml-16 md:ml-0 ${
                     index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'
                   } bg-bg-surface dark:bg-darksurface border border-border dark:border-darkborder rounded-2xl p-8 hover:bg-bg-subtle dark:hover:bg-darksubtle hover:border-primary-500 hover:scale-[1.02] transition-all duration-500 transform ${
+                    exp.status === 'in-progress' ? 'ring-1 ring-primary-500/20' : ''
+                  } ${
                     visibleCards.includes(index)
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-10 opacity-0'
@@ -122,18 +141,46 @@ const ExperienceTimeline = () => {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  {/* Job Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary-500 mb-2">
-                    {exp.title}
-                  </h3>
+                  {/* Header: logo, title, badge */}
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
+                    {exp.status === 'in-progress' && (
+                      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-soft dark:bg-primary-500/10 border border-border dark:border-darkborder flex items-center justify-center">
+                        <span className="text-lg font-bold text-primary-500 tracking-tight">ML</span>
+                      </div>
+                    )}
 
-                  {/* Company & Duration */}
-                  <div className="flex flex-wrap items-center gap-2 text-ink-secondary dark:text-darkink-secondary mb-4">
-                    <span className="text-lg font-bold">{exp.company}</span>
-                    <span className="text-ink-muted dark:text-darkink-muted">•</span>
-                    <span className="text-sm">{exp.duration}</span>
-                    <span className="text-ink-muted dark:text-darkink-muted">•</span>
-                    <span className="text-sm">{exp.location}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
+                        <h3 className="text-2xl md:text-3xl font-bold text-primary-500">
+                          {exp.title}
+                        </h3>
+
+                        {exp.status === 'in-progress' && (
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-success-soft dark:bg-success-500/10 border border-success-500/30 text-success-500 text-xs font-semibold uppercase tracking-wide">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-500 opacity-75" />
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-success-500" />
+                            </span>
+                            In Progress
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Company & Duration */}
+                      <div className="flex flex-wrap items-center gap-2 text-ink-secondary dark:text-darkink-secondary">
+                        <span className="text-lg font-bold">{exp.company}</span>
+                        <span className="text-ink-muted dark:text-darkink-muted">•</span>
+                        <span className="text-sm font-mono">{exp.duration}</span>
+                        {exp.durationDetail && (
+                          <>
+                            <span className="text-ink-muted dark:text-darkink-muted">•</span>
+                            <span className="text-sm font-mono">{exp.durationDetail}</span>
+                          </>
+                        )}
+                        <span className="text-ink-muted dark:text-darkink-muted">•</span>
+                        <span className="text-sm">{exp.location}</span>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Description */}
@@ -202,7 +249,7 @@ const ExperienceTimeline = () => {
                               className="flex items-start text-ink-muted dark:text-darkink-muted text-sm"
                             >
                               <svg
-                                className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                                className="w-5 h-5 text-success-500 mr-2 mt-0.5 flex-shrink-0"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
