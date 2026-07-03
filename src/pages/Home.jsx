@@ -18,11 +18,11 @@ const Home = () => {
   return (
     <div>
       <SEOHead
-        title="Muhammad Haroon Portfolio | Full Stack Web Developer"
-        description="Official Muhammad Haroon (Mohammad Haroon) portfolio of a passionate Full Stack Web Developer from Bahawalpur, Pakistan. Specializing in React.js, WordPress, Node.js, and modern web technologies. View my projects and get in touch!"
+        title="Muhammad Haroon | Full Stack Web Developer (MERN, React, WordPress)"
+        description="Muhammad Haroon is a Full Stack Web Developer from Bahawalpur, Pakistan, specializing in React.js, Node.js, MongoDB, and WordPress. View projects and hire for freelance work."
         keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
-        ogImage="https://devowl.me/og-image.jpg"
+        ogImage="https://devowl.me/profile-photo.webp"
       />
       <Hero />
 

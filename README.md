@@ -142,7 +142,7 @@ Portfolio/
 ├── public/
 │   ├── sitemap.xml          # SEO sitemap
 │   ├── manifest.json        # PWA manifest
-│   └── og-image.jpg         # Open Graph image
+│   └── profile-photo.webp   # Profile photo / Open Graph image
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx

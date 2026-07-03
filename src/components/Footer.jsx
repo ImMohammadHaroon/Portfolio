@@ -193,7 +193,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <p className="text-darkink-secondary text-sm text-center md:text-left">
-            © 2025 DevOwl. All rights reserved.
+            © {new Date().getFullYear()} Muhammad Haroon (DevOwl). All rights reserved.
           </p>
 
           {/* Social Links */}

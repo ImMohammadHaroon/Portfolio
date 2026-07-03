@@ -153,7 +153,7 @@ const Projects = () => {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - project by Muhammad Haroon`}
                   loading="lazy"
                   decoding="async"
                   width="400"

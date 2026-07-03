@@ -22,16 +22,30 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      setTimeout(() => {
-        const element = document.getElementById(hash.replace('#', ''));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
+    if (!hash) {
       window.scrollTo(0, 0);
+      return;
     }
+
+    const id = hash.replace('#', '');
+    let attempts = 0;
+    const maxAttempts = 30;
+    const navOffset = 80;
+
+    const tryScroll = () => {
+      const element = document.getElementById(id);
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY - navOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        return;
+      }
+      if (attempts < maxAttempts) {
+        attempts += 1;
+        setTimeout(tryScroll, 100);
+      }
+    };
+
+    tryScroll();
   }, [pathname, hash]);
 
   return null;

@@ -96,7 +96,7 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section className="py-20 bg-bg-main dark:bg-darkbg overflow-hidden">
+    <section id="skills" className="py-20 bg-bg-main dark:bg-darkbg overflow-hidden">
       <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-16 px-4 sm:px-6 lg:px-8">
