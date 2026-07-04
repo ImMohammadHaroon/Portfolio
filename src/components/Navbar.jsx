@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
+    { name: 'About', to: 'about', path: '/muhammad-haroon' },
     { name: 'Projects', to: 'work', path: '/projects' },
     { name: 'Research', to: 'publications' },
     { name: 'Contact', to: 'contact' },

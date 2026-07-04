@@ -18,9 +18,9 @@ const Home = () => {
   return (
     <div>
       <SEOHead
-        title="Muhammad Haroon | Full Stack Web Developer (MERN, React, WordPress)"
-        description="Muhammad Haroon is a Full Stack Web Developer from Bahawalpur, Pakistan, specializing in React.js, Node.js, MongoDB, and WordPress. View projects and hire for freelance work."
-        keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
+        title="Muhammad Haroon | Full Stack Developer & Freelance Web Developer"
+        description="Muhammad Haroon is a Full Stack Developer and freelance web developer from Bahawalpur, Pakistan, specializing in React.js, Node.js, MongoDB, and WordPress."
+        keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Freelance Web Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
         ogImage="https://devowl.me/profile-photo.webp"
       />
@@ -40,7 +40,7 @@ const Home = () => {
               <div className="relative">
                 <img
                   src={aboutImage}
-                  alt="Muhammad Haroon (Mohammad Haroon) - Full Stack Web Developer from Bahawalpur, Pakistan"
+                  alt="Muhammad Haroon, full stack developer"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="lazy"
                   width="600"

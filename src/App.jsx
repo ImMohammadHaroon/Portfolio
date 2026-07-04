@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from './components/Navbar';
@@ -8,6 +8,7 @@ import SectionLoader from './components/SectionLoader';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
 const MeetingAI = lazy(() => import('./pages/projects/MeetingAI'));
 const Syeen = lazy(() => import('./pages/projects/Syeen'));
 const EcommerceProject = lazy(() => import('./pages/projects/EcommerceProject'));
@@ -67,6 +68,8 @@ function App() {
                 <Home />
               </>
             } />
+            <Route path="/muhammad-haroon" element={<About />} />
+            <Route path="/about" element={<Navigate to="/muhammad-haroon" replace />} />
             <Route path="/projects" element={<AllProjects />} />
             <Route path="/project/meet-ai" element={<MeetingAI />} />
             <Route path="/project/syeen" element={<Syeen />} />
