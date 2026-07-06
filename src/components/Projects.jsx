@@ -6,6 +6,7 @@ import EcommerceImage from '../assets/EcommerceProject.webp';
 import FoncentraImage from '../assets/foncentra.webp';
 import ApertureImage from '../assets/bluelines-lifeline-rag.webp';
 import WordyImage from '../assets/wordy.webp';
+import MaritimeLinkImage from '../assets/maritimelink.jpeg';
 
 const Projects = () => {
   const location = useLocation();
@@ -93,7 +94,7 @@ const Projects = () => {
       id: 8,
       title: 'MaritimeLink: Maritime Workforce Platform',
       description: 'A production React SPA for MaritimeLink Ltd connecting seafarers, recruiters, training providers, and admins through maritime CVs, document wallets, job marketplace, Stripe bookings, KYC compliance, and real-time messaging.',
-      image: '/maritime-link-cover.svg',
+      image: MaritimeLinkImage,
       category: 'Full-Stack Development',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'Socket.IO', 'Stripe', 'React Router'],
       link: '/project/maritime-link'

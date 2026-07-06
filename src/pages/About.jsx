@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
-import aboutImage from '../assets/about.webp';
+import aboutImage from '../assets/about.jpeg';
 
 const personSchema = {
   '@context': 'https://schema.org',

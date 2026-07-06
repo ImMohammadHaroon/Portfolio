@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
 import ProjectPageNav from '../../components/ProjectPageNav';
+import maritimeLinkCover from '../../assets/maritimelink.jpeg';
 
 const MaritimeLink = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -196,12 +197,10 @@ const MaritimeLink = () => {
         <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/maritime-link-cover.svg"
+              src={maritimeLinkCover}
               alt="MaritimeLink Platform Interface"
               className="w-full h-auto object-cover"
               loading="lazy"
-              width="1200"
-              height="630"
               decoding="async"
             />
           </div>

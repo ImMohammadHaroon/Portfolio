@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import Hero from '../components/Hero';
 import ScrollToTop from '../components/ScrollToTop';
 import SEOHead from '../components/SEOHead';
-import aboutImage from '../assets/about.webp';
+import aboutImage from '../assets/about.jpeg';
 
 // Lazy load heavy components to improve initial page load speed
 const Skills = lazy(() => import('../components/Skills'));
