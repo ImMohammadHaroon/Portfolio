@@ -42,8 +42,7 @@ const AllProjects = () => {
               { "@type": "ListItem", "position": 3, "name": "Foncentra - E-Learning Platform", "url": "https://devowl.me/project/foncentra" },
               { "@type": "ListItem", "position": 4, "name": "GearNix - E-commerce Platform", "url": "https://devowl.me/project/ecommerce" },
               { "@type": "ListItem", "position": 5, "name": "Aperture Futures - AI Intelligence Platform", "url": "https://devowl.me/project/aperture-futures" },
-              { "@type": "ListItem", "position": 6, "name": "Wordy app - WordPress Language Learning App", "url": "https://devowl.me/project/wordy-app" },
-              { "@type": "ListItem", "position": 7, "name": "MaritimeLink - Maritime Workforce Platform", "url": "https://devowl.me/project/maritime-link" }
+              { "@type": "ListItem", "position": 6, "name": "Wordy app - WordPress Language Learning App", "url": "https://devowl.me/project/wordy-app" }
             ]
           }
         }}

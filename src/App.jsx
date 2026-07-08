@@ -15,7 +15,6 @@ const EcommerceProject = lazy(() => import('./pages/projects/EcommerceProject'))
 const Foncentra = lazy(() => import('./pages/projects/Foncentra'));
 const ApertureFutures = lazy(() => import('./pages/projects/ApertureFutures'));
 const WordyApp = lazy(() => import('./pages/projects/WordyApp'));
-const MaritimeLink = lazy(() => import('./pages/projects/MaritimeLink'));
 const AllProjects = lazy(() => import('./pages/AllProjects'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -77,7 +76,6 @@ function App() {
             <Route path="/project/foncentra" element={<Foncentra />} />
             <Route path="/project/aperture-futures" element={<ApertureFutures />} />
             <Route path="/project/wordy-app" element={<WordyApp />} />
-            <Route path="/project/maritime-link" element={<MaritimeLink />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
