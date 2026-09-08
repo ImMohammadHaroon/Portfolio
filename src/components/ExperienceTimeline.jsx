@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import mlBenchCertificate from '../assets/ml-bench-certificakte.pdf?url';
 
 const ExperienceTimeline = () => {
   const [visibleCards, setVisibleCards] = useState([]);
@@ -31,12 +32,17 @@ const ExperienceTimeline = () => {
     {
       title: 'Full Stack Developer Intern (MERN Stack)',
       company: 'ML Bench',
-      duration: 'June 2026 – September 2026',
-      durationDetail: '3 Months',
+      duration: 'June 2026 – August 2026',
+      durationDetail: '2 Months',
       location: 'Remote',
-      status: 'in-progress',
+      status: 'completed',
+      logo: 'ML',
+      certificate: {
+        url: mlBenchCertificate,
+        title: 'ML Bench Internship Certificate',
+      },
       description:
-        'Working as a Full Stack Intern at ML Bench, building and maintaining web applications using MongoDB, Express.js, React.js, and Node.js. Contributing to real-world projects across frontend UI, REST APIs, and database design.',
+        'Completed a 2-month Full Stack internship at ML Bench, building and maintaining web applications using MongoDB, Express.js, React.js, and Node.js. Contributed to real-world projects across frontend UI, REST APIs, and database design.',
       responsibilities: [
         'Building and maintaining web applications with the MERN stack',
         'Contributing to frontend UI, REST APIs, and database design',
@@ -143,9 +149,9 @@ const ExperienceTimeline = () => {
                 >
                   {/* Header: logo, title, badge */}
                   <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
-                    {exp.status === 'in-progress' && (
+                    {exp.logo && (
                       <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-soft dark:bg-primary-500/10 border border-border dark:border-darkborder flex items-center justify-center">
-                        <span className="text-lg font-bold text-primary-500 tracking-tight">ML</span>
+                        <span className="text-lg font-bold text-primary-500 tracking-tight">{exp.logo}</span>
                       </div>
                     )}
 
@@ -162,6 +168,15 @@ const ExperienceTimeline = () => {
                               <span className="relative inline-flex rounded-full h-2 w-2 bg-success-500" />
                             </span>
                             In Progress
+                          </span>
+                        )}
+
+                        {exp.status === 'completed' && (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-soft dark:bg-primary-500/10 border border-primary-500/30 text-primary-500 text-xs font-semibold uppercase tracking-wide">
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Completed
                           </span>
                         )}
                       </div>
@@ -267,6 +282,34 @@ const ExperienceTimeline = () => {
                         </ul>
                       </div>
                     </>
+                  )}
+
+                  {exp.certificate && (
+                    <div className="mt-6 pt-6 border-t border-border dark:border-darkborder">
+                      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                        <h4 className="text-lg font-semibold text-ink-primary dark:text-darkink-primary">
+                          Certificate
+                        </h4>
+                        <a
+                          href={exp.certificate.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-ink-inverse text-sm font-semibold transition-colors"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          View certificate
+                        </a>
+                      </div>
+                      <div className="rounded-xl overflow-hidden border border-border dark:border-darkborder bg-bg-subtle dark:bg-darksubtle">
+                        <iframe
+                          src={`${exp.certificate.url}#toolbar=0&navpanes=0`}
+                          title={exp.certificate.title}
+                          className="w-full h-[280px] sm:h-[360px] md:h-[420px] bg-white"
+                        />
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>
