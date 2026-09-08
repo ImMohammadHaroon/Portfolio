@@ -15,9 +15,14 @@ const personSchema = {
   jobTitle: 'Full Stack Developer',
   description:
     'Muhammad Haroon is a Full Stack Developer and freelance web developer based in Bahawalpur, Pakistan, specializing in React.js, Node.js, MongoDB, and WordPress.',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'ML Bench',
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Full Stack Developer Internship Certificate',
+    credentialCategory: 'Internship Certificate',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'ML Bench',
+    },
   },
   alumniOf: {
     '@type': 'CollegeOrUniversity',
@@ -97,8 +102,8 @@ const About = () => {
 
               <p className="text-base md:text-lg text-ink-muted dark:text-darkink-muted leading-relaxed">
                 He completed a Bachelor of Computer Science from Cholistan University of Veterinary
-                & Animal Sciences (CUVAS Bahawalpur), and currently works as a Full Stack Developer
-                Intern at ML Bench. Previously he delivered freelance projects on Fiverr and
+                & Animal Sciences (CUVAS Bahawalpur), and recently completed a 2-month Full Stack
+                Developer internship at ML Bench. Previously he delivered freelance projects on Fiverr and
                 Freelancer, and worked as a Web Developer at Arkidu Development.
               </p>
 
@@ -113,10 +118,10 @@ const About = () => {
                 </div>
                 <div className="p-5 bg-bg-surface dark:bg-darksurface rounded-xl border border-border dark:border-darkborder">
                   <dt className="text-xs font-semibold uppercase tracking-wide text-ink-muted dark:text-darkink-muted mb-1">
-                    Currently
+                    Previously
                   </dt>
                   <dd className="text-sm font-semibold text-ink-primary dark:text-darkink-primary">
-                    Full Stack Developer at ML Bench
+                    Full Stack Intern at ML Bench
                   </dd>
                 </div>
                 <div className="p-5 bg-bg-surface dark:bg-darksurface rounded-xl border border-border dark:border-darkborder">
