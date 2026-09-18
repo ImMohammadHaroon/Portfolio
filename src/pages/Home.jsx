@@ -15,6 +15,37 @@ const Footer = lazy(() => import('../components/Footer'));
 import SectionLoader from '../components/SectionLoader';
 
 const Home = () => {
+  const homeFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Who is Mohammad Haroon?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Mohammad Haroon, also published as Muhammad Haroon and DevOwl, is a Full Stack Web Developer based in Bahawalpur, Pakistan. He builds React.js, Node.js, MongoDB, WordPress, and e-commerce web projects.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What services does Muhammad Haroon offer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Muhammad Haroon offers full-stack web development, React.js applications, WordPress and Elementor development, e-commerce development, and SEO-focused website improvements.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where is Muhammad Haroon based?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Muhammad Haroon is based in Bahawalpur, Pakistan and is available for freelance web development work.',
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <SEOHead
@@ -23,6 +54,7 @@ const Home = () => {
         keywords="Muhammad Haroon, Mohammad Haroon, Muhammad Haroon Portfolio, Mohammad Haroon Portfolio, Haroon's Portfolio, Full Stack Developer, Freelance Web Developer, Web Developer Bahawalpur, React Developer, WordPress Developer, MERN Stack, Pakistan Developer, JavaScript Expert, Node.js Developer"
         canonicalUrl="https://devowl.me/"
         ogImage="https://devowl.me/profile-photo.webp"
+        structuredData={homeFaqSchema}
       />
       <Hero />
 
@@ -64,6 +96,17 @@ const Home = () => {
                 I completed my Bachelor of Computer Science from Cholistan University of Veterinary &
                 Animal Sciences (CUVAS), Bahawalpur, combining academic knowledge with practical development skills to deliver exceptional web solutions. I specialize in building cutting-edge e-commerce platforms, dynamic web applications, and SEO-optimized websites that drive results.
               </p>
+
+              <div className="space-y-3 pt-2">
+                <h3 className="text-2xl font-bold text-ink-primary dark:text-darkink-primary">
+                  About Mohammad Haroon
+                </h3>
+                <p className="text-base md:text-lg text-ink-muted dark:text-darkink-muted leading-relaxed">
+                  Mohammad Haroon, also known as Muhammad Haroon and DevOwl, is a Full Stack Web Developer in
+                  Bahawalpur, Pakistan. He builds React.js, Node.js, MongoDB, WordPress, e-commerce, and
+                  SEO-focused web projects for clients and teams.
+                </p>
+              </div>
 
               {/* Key Achievements */}
               <div className="space-y-6 pt-4">
